@@ -3924,17 +3924,17 @@ html.flexbox {
  */
 /* line 8, ../sass/inuit.css/generic/_brand.scss */
 .brand {
-  font-family: "Helvetica Neue", sans-serif!important;
-  color: #4a8ec2!important; }
+  font-family: VegurRegular, Ariel, "Helvetica Neue", sans-serif!important;
+  color: #333333!important; }
 
 /* line 12, ../sass/inuit.css/generic/_brand.scss */
 .brand-face {
-  font-family: "Helvetica Neue", sans-serif!important; }
+  font-family: VegurRegular, Ariel, "Helvetica Neue", sans-serif!important; }
 
 /* line 16, ../sass/inuit.css/generic/_brand.scss */
 .brand-color,
 .brand-colour {
-  color: #4a8ec2!important; }
+  color: #333333!important; }
 
 /*------------------------------------*\
     $HELPER
@@ -4116,18 +4116,26 @@ html.flexbox {
 /*
  * http://sachagreif.com/useful-sass-mixins/
  */
-/* line 28, ../sass/style.scss */
+/* line 1, ../sass/modules/_layouts.scss */
 .chromeframe {
   margin: 0.2em 0;
   background: #ccc;
   color: #000;
   padding: 0.2em 0; }
 
-/* line 35, ../sass/style.scss */
-.grid-wrapper {
+/* line 8, ../sass/modules/_layouts.scss */
+body {
+  background: #222222;
+  font-family: VegurRegular, Ariel, "Helvetica Neue", sans-serif; }
+
+/* line 13, ../sass/modules/_layouts.scss */
+.container {
   max-width: 960px;
   margin: auto; }
 
-/* line 44, ../sass/style.scss */
-body {
-  font-family: VegurRegular; }
+/* line 22, ../sass/modules/_layouts.scss */
+.page-header {
+  margin: 5px 0;
+  background: #578b40 url('../img/bg_soccer-lg.jpg?1368918981') no-repeat center -350px;
+  height: 59px;
+  border-bottom: 1px solid #000; }

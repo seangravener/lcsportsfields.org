@@ -24,24 +24,5 @@
 
 @import "settings";
 @import "modules/utilities";
-
-.chromeframe {
-  margin: 0.2em 0;
-  background: #ccc;
-  color: #000;
-  padding: 0.2em 0;
-}
-
-.grid-wrapper {
-  max-width: 960px;
-  margin: auto;
-}
-
-// $main-layout: smart;
-// @import "main/*.png";
-// @include all-main-sprites; 
-
-body {
-  // background: $darkGray;
-  font-family: VegurRegular;
-}
+@import "modules/layouts";
+@import "modules/typography";

@@ -1,9 +1,22 @@
-/*
-     ___   ___
-    / __) / __)          Sean Gravener
-    \__ \( (_-.          @seangravener
-    (___/ \___/          http://sean.gravener.net
+/* Website Team */
 
-    Web, Designed!
+	Content Curator: 
+		
+		Twitter:
 
-*/
+
+	Web Design:
+	     ___   ___
+	    / __) / __)          Sean Gravener
+	    \__ \( (_-.          @seangravener
+	    (___/ \___/          http://sean.gravener.net
+		                     Web, Designed!
+
+/* Board of Directors */
+
+/* Board of Directors */
+
+/* Site */
+	Doctype: HTML5
+	Frameworks: inuit.css, jQuery
+	IDE: Sublime Text 2, Git, Sass, Photoshop 

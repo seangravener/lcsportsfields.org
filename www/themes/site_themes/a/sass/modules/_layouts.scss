@@ -1,0 +1,27 @@
+.chromeframe {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+body {
+  background: $darkGray;
+  font-family: $brand-face;
+}
+
+.container {
+  max-width: 960px;
+  margin: auto;
+}
+
+// $main-layout: smart;
+// @import "main/*.png";
+// @include all-main-sprites; 
+
+.page-header {
+	margin: 5px 0;
+	background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -350px;
+	height: 59px;
+	border-bottom: 1px solid #000;
+}
