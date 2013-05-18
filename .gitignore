@@ -1,0 +1,39 @@
+# Project Specific Files #
+##########################
+.sass-cache
+*conflicted*
+
+# Compiled source #
+###################
+*.com
+*.class
+*.dll
+*.exe
+*.o
+*.so
+*.pyc
+
+# OS generated files #
+######################
+.DS_Store
+ehthumbs.db
+Icon?
+Thumbs.db
+
+# Images
+# uploads/images/captchas/
+www/uploads/images/misc/*
+www/uploads/member/avatars/uploads/*
+www/uploads/member/photos/*
+www/uploads/member/pm_attachments/*
+www/uploads/member/signature_attachments/*
+
+# compiled assets
+*/css/
+# *min.js
+
+# Caches
+sized/
+thumbs/
+_thumbs/
+system/expressionengine/cache/*

@@ -1,0 +1,19 @@
+{embed="_common/.head"
+	body_class="{embed:body_class}"
+	page_title="{embed:page_title}"
+}
+
+<div class="container">
+	<div class="row">
+		<div class="span{embed:main_span} offset{embed:main_offset}">
+			{embed="{embed:target}"
+				group_id="{embed:group_id}"
+				channel="{embed:channel}"
+				category="{embed:category}"
+				order_id="{embed:order_id}"
+			}
+		</div>
+	</div>
+</div>
+
+{embed="_common/.footer"}
