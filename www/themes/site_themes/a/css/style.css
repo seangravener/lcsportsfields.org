@@ -4137,5 +4137,22 @@ body {
 .page-header {
   margin: 5px 0;
   background: #578b40 url('../img/bg_soccer-lg.jpg?1368918981') no-repeat center -350px;
-  height: 59px;
+  min-height: 59px;
   border-bottom: 1px solid #000; }
+  /* line 28, ../sass/modules/_layouts.scss */
+  .page-header .container {
+    position: relative; }
+
+/* line 33, ../sass/modules/_layouts.scss */
+.page-logo {
+  position: absolute;
+  top: 0;
+  left: 10px;
+  display: block;
+  height: 146px;
+  width: 113px;
+  background: url('../img/page/logo.png?1368973222') no-repeat 0 0; }
+
+/* line 44, ../sass/modules/_layouts.scss */
+.nav {
+  text-align: right; }
