@@ -38,7 +38,7 @@ body {
 
 	background: image-url('page/logo.png') no-repeat 0 0;
 
-	@extend .hide-text;
+	@extend %hide-text;
 }
 
 .nav {

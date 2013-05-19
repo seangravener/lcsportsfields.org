@@ -21,6 +21,9 @@
     text-shadow: none;
     color: transparent;
 }
+%hide-text {
+    @include hide-text();
+}
 
 @mixin navigation-list {
     list-style-type:none;
