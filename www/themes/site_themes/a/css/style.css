@@ -3705,16 +3705,87 @@ body {
   .page-header .container {
     position: relative; }
 
-/* line 33, ../sass/modules/_layouts.scss */
+/* line 34, ../sass/modules/_layouts.scss */
+.nav--top {
+  text-align: right;
+  margin: 0 .8em 0 0;
+  padding: .8em 0; }
+  /* line 38, ../sass/modules/_layouts.scss */
+  .nav--top > li {
+    margin-left: .8em;
+    position: relative; }
+  /* line 43, ../sass/modules/_layouts.scss */
+  .nav--top a {
+    display: block;
+    padding: 3px 10px;
+    background: #016117;
+    color: #fff;
+    text-decoration: none;
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -ms-border-radius: 4px;
+    -o-border-radius: 4px;
+    border-radius: 4px; }
+  /* line 53, ../sass/modules/_layouts.scss */
+  .nav--top li.active a {
+    background: #fff;
+    color: #016117; }
+  /* line 58, ../sass/modules/_layouts.scss */
+  .nav--top li.active:after {
+    content: "";
+    display: block;
+    width: 0;
+    height: 0;
+    border: inset 5px;
+    border-color: white transparent transparent transparent;
+    border-top-style: solid;
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    margin-left: -4px; }
+
+/* line 67, ../sass/modules/_layouts.scss */
 .page-logo {
   position: absolute;
   top: 0;
   left: 10px;
   display: block;
-  height: 146px;
+  height: 141px;
   width: 113px;
-  background: url('../img/page/logo.png?1368973222') no-repeat 0 0; }
+  background: url('../img/page/logo.png?1368973222') no-repeat 0 -5px; }
 
-/* line 44, ../sass/modules/_layouts.scss */
-.nav {
-  text-align: right; }
+/* line 3, ../sass/modules/_navigation.scss */
+.nav--dropdown li > ul {
+  background: #fff;
+  /* Adding a background makes the dropdown work properly in IE7+. Make this as close to your page&#039;s background as possible (i.e. white page == white background). */
+  list-style: none;
+  position: absolute;
+  left: -9999px;
+  /* Hide off-screen when not needed (this is more accessible than display:none;) */ }
+/* line 9, ../sass/modules/_navigation.scss */
+.nav--dropdown li > ul li {
+  padding-top: 1px;
+  /* Introducing a padding between the li and the a give the illusion spaced items */
+  float: none; }
+/* line 13, ../sass/modules/_navigation.scss */
+.nav--dropdown li > ul a {
+  white-space: nowrap;
+  /* Stop text wrapping and creating multi-line dropdown items */ }
+/* line 19, ../sass/modules/_navigation.scss */
+.nav--dropdown li:hover ul {
+  /* Display the dropdown on hover */
+  left: 0;
+  /* Bring back on-screen when needed */ }
+/* line 22, ../sass/modules/_navigation.scss */
+.nav--dropdown li:hover a {
+  /* These create persistent hover states, meaning the top-most link stays &#039;hovered&#039; even when your cursor has moved down the list. */
+  background: #6b0c36;
+  text-decoration: underline; }
+/* line 26, ../sass/modules/_navigation.scss */
+.nav--dropdown li:hover ul a {
+  /* The persistent hover state does however create a global style for links even before they&#039;re hovered. Here we undo these effects. */
+  text-decoration: none; }
+/* line 29, ../sass/modules/_navigation.scss */
+.nav--dropdown li:hover ul li a:hover {
+  /* Here we define the most explicit hover states--what happens when you hover each individual link. */
+  background: #333; }

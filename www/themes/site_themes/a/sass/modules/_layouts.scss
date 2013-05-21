@@ -30,17 +30,47 @@ body {
 	}
 }
 
-.page-logo {
-	position: absolute; // relative to .page-header
-	top: 0; left: 10px;
-	display: block;
-	height: 146px; width: 113px;
 
-	background: image-url('page/logo.png') no-repeat 0 0;
+.nav--top {
+	text-align: right;
+	margin: 0 .8em 0 0; padding: .8em 0;
 
-	@extend %hide-text;
+	> li {
+		margin-left: .8em;
+		position: relative;
+	}
+
+	a {
+		display: block;
+		padding: 3px 10px;
+		background: #016117;
+		color: #fff;
+		text-decoration: none;
+		@include border-radius($border-radius);
+	}
+
+	li.active { 
+		a {
+			background: #fff;
+			color: #016117;
+		}
+		
+		&:after {
+			@include css-triangle(5px, #fff, top);
+			position: absolute;
+			bottom: -10px;
+			left: 50%; margin-left: -4px; // align to center
+		}
+	}
 }
 
-.nav {
-	text-align: right;
+.page-logo {
+	position: absolute; // relative to .page-header > .container
+	top: 0; left: 10px;
+	display: block;
+	height: 141px; width: 113px;
+
+	background: image-url('page/logo.png') no-repeat 0 -5px;
+
+	@extend %hide-text;
 }

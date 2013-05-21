@@ -16,8 +16,8 @@ $config['install_lock'] = "";
 $config['license_number'] = 'CORE LICENSE';
 $config['debug'] = '1';
 $config['cp_url'] = 'http://local.lcsportsfields.org/system-kvq.php';
-$config['doc_url'] = 'http://ellislab.com/expressionengine/user-guide/';
-$config['is_system_on'] = 'y';
+$config['doc_url'] = "http://expressionengine.com/user_guide/";
+$config['is_system_on'] = "y";
 $config['allow_extensions'] = 'y';
 $config['site_label'] = 'Lehigh Sports Field Association';
 $config['cookie_prefix'] = '';
@@ -48,7 +48,7 @@ $config['base_url']	= '';
 | variable so that it is blank.
 |
 */
-$config['index_page'] = '';
+$config['index_page'] = "";
 
 /*
 |--------------------------------------------------------------------------
