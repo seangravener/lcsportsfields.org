@@ -1,10 +1,8 @@
-# Project Specific Files #
-##########################
+# Project Specific Files
 .sass-cache
 *conflicted*
 
-# Compiled source #
-###################
+# Compiled source
 *.com
 *.class
 *.dll
@@ -13,8 +11,7 @@
 *.so
 *.pyc
 
-# OS generated files #
-######################
+# OS generated files
 .DS_Store
 ehthumbs.db
 Icon?
@@ -37,3 +34,6 @@ sized/
 thumbs/
 _thumbs/
 system/expressionengine/cache/*
+
+ee_config_bootstrap.php
+expressionengine/
