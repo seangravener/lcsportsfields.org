@@ -26,8 +26,9 @@ www/uploads/member/pm_attachments/*
 www/uploads/member/signature_attachments/*
 
 # compiled assets
-*/css/
+# */css/
 # *min.js
+www/themes/site_themes/a/css/
 
 # Caches
 sized/
