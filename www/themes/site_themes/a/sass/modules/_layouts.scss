@@ -11,8 +11,14 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: $content_max-width;
   margin: auto;
+}
+
+.content-box {
+  border-left: 5px solid #222;
+  border-right: 5px solid #222;
+  box-sizing: content-box;
 }
 
 // $main-layout: smart;
@@ -20,57 +26,12 @@ body {
 // @include all-main-sprites; 
 
 .page-header {
-	margin: 5px 0;
-	background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -350px;
-	min-height: 59px;
-	border-bottom: 1px solid #000;
+  margin: 5px 0;
+  background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -340px;
+  // min-height: 59px;
+  border-bottom: 1px solid #000;
 
-	.container {
-		position: relative;
-	}
-}
-
-
-.nav--top {
-	text-align: right;
-	margin: 0 .8em 0 0; padding: .8em 0;
-
-	> li {
-		margin-left: .8em;
-		position: relative;
-	}
-
-	a {
-		display: block;
-		padding: 3px 10px;
-		background: #016117;
-		color: #fff;
-		text-decoration: none;
-		@include border-radius($border-radius);
-	}
-
-	li.active { 
-		a {
-			background: #fff;
-			color: #016117;
-		}
-		
-		&:after {
-			@include css-triangle(5px, #fff, top);
-			position: absolute;
-			bottom: -10px;
-			left: 50%; margin-left: -4px; // align to center
-		}
-	}
-}
-
-.page-logo {
-	position: absolute; // relative to .page-header > .container
-	top: 0; left: 10px;
-	display: block;
-	height: 141px; width: 113px;
-
-	background: image-url('page/logo.png') no-repeat 0 -5px;
-
-	@extend %hide-text;
+  .container {
+    position: relative;
+  }
 }

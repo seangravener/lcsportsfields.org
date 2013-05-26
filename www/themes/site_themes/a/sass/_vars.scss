@@ -24,7 +24,7 @@
  * following variables to `true`.
  */
 $use-grids:         true;
-$use-flexbox:       true;
+$use-flexbox:       falses;
 $use-columns:       true;
 $use-nav:           true;
 $use-options:       true;
@@ -63,7 +63,6 @@ $use-greybox:       false;
 $brand-color:       #333;
 $brand-face:        VegurRegular, Ariel, "Helvetica Neue", sans-serif;
 
-
 /*------------------------------------*\
     $CUSTOM
 \*------------------------------------*/
@@ -75,5 +74,9 @@ $brand-face:        VegurRegular, Ariel, "Helvetica Neue", sans-serif;
 
 $black:       #000;
 $darkGray:    #222;
+$green: 	  #6b0c36;
+$fieldGreen:  #016117;
 
 $border-radius: 4px;
+
+$content_max-width: 1140px;

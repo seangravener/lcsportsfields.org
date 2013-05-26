@@ -1,28 +1,37 @@
+<section>
+  menu!
+</section>
+
 <header class="page-header">
-	<div class="container">
+	<div class="container  content-box">
 	
 		<a href="" class="page-logo">
 			Lehigh County Sports Fields
 		</a>
 
 		<!-- <div class="grid  desk-two-thirds  lap-one-half  one-whole"> -->
-		<ul class="nav  nav--top  nav--dropdown list--inline">
+		<ul class="nav  nav--top  nav--dropdown  list--inline">
 			<li class="active">
-        <a href="">menu</a>
-        <ul class="nav nav--block  nav--stacked">
-          <li><a href="">subitem</a></li>
-          <li><a href="">subitem</a></li>
-          <li><a href="">subitem</a></li>
-        </ul>
+        <a href="">About the LCSFA</a>
+        <div class="nav--dropdown--menu">
+          <ul class="nav--block nav--stacked">
+            <li><a href="">
+              History
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">Board Members</a></li>
+            <li><a href="">subitem</a></li>
+          </ul>
+        </div>
       </li>
 			<li>
         <a href="">menu 2</a>
-        <ul class="nav nav--block  nav--stacked">
+       <!--  <ul class="nav  nav--block  nav--stacked">
           <li><a href="">subitem</a></li>
           <li><a href="">subitem</a></li>
           <li><a href="">subitem</a></li>
         </ul>
-
+ -->
       </li>
 			<li><a href="">menu</a></li>
 		</ul>
@@ -30,21 +39,30 @@
 	</div>
 </header>
 
-<div class="container">
-<div class="flexslider">
-  <ul class="slides">
-    <li>
-      <img src="slide1.jpg" />
-    </li>
-    <li>
-      <img src="slide2.jpg" />
-    </li>
-    <li>
-      <img src="slide3.jpg" />
-    </li>
-    <li>
-      <img src="slide4.jpg" />
-    </li>
-  </ul>
-</div>
-</div>
+<section class="flex-container">
+  <div class="flexslider">
+    <ul class="slides">
+      <li data-thumb="/uploads/images/test-1-thumb.jpg">
+        <a href="" title="title tag"><img src="/uploads/images/test-1.jpg" /></a>
+        <article class="flex-caption">
+          <h2 class="flex-caption-title">Game On!</h2>
+          <div class="flex-caption-body">
+            <a href="">Captions</a> and cupcakes. Winning combination.
+          </div>
+        </article>
+      </li>
+      <li data-thumb="/uploads/images/test-1-thumb.jpg">
+        <a href=""><img src="/uploads/images/test-1.jpg" /></a>
+        <p class="flex-caption">This image is wrapped in a link!</p>
+      </li>
+      <li data-thumb="/uploads/images/test-1-thumb.jpg">
+        <img src="/uploads/images/test-1.jpg" />
+        <p class="flex-caption">This image is wrapped in a link!</p>
+      </li>
+      <li title="hover" data-thumb="/uploads/images/test-1-thumb.jpg">
+        <img src="/uploads/images/test-1.jpg" />
+        <p class="flex-caption">This image is wrapped in a link!</p>
+      </li>
+    </ul>
+  </div>
+</section>

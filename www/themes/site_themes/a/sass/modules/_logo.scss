@@ -1,0 +1,22 @@
+.page-logo {
+  display: block;
+  position: absolute; // relative to .page-header > .container
+  top: 0; left: 40px;
+  height: 141px; width: 113px;
+  background: image-url('page/logo.png') no-repeat 0 -5px;
+
+  z-index: 10;
+  @extend %hide-text;
+}
+
+@include media-query(palm){
+	.page-logo {
+		position: static;
+		margin: 0 auto;
+		background-position: center top;
+	}
+	.page-header {
+		// background-size: 80%;
+		// background-position: 0;
+	}
+}

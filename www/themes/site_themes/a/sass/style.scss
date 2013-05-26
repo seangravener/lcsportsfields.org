@@ -24,10 +24,16 @@
  */
 
 @import "settings";
+
+// modules
 @import "modules/utilities";
 @import "modules/layouts";
 @import "modules/typography";
 @import "modules/navigation";
+@import "modules/logo";
 
+// plugins
+@import "plugins/flexslider-custom";
 
-@import "plugins/flexslider";
+// other
+@import "modules/overrides"; // must be last
