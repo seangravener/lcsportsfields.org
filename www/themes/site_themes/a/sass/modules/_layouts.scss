@@ -28,10 +28,43 @@ body {
 .page-header {
   margin: 5px 0;
   background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -340px;
-  // min-height: 59px;
+  min-height: 50px;
   border-bottom: 1px solid #000;
 
   .container {
     position: relative;
   }
+}
+
+.page__main-content {
+  background: #578b40 image-url('bg_field.jpg') repeat;
+
+  // position: relative;
+  // &:after {
+  //   content: "";
+  //   display: block;
+  //   position: absolute;
+  //   top: 0; left: 0; right: 0; bottom: 0;
+  //   background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat 0 0;
+  //   background-size: 150%;
+  //   opacity: .3;
+  //   z-index: -1;
+  // }
+
+  .container {
+    background: #222;
+  }
+
+  .content__column {    
+    margin-bottom: $base-spacing-unit;
+    padding: $base-spacing-unit;
+    background: #efefef;
+    border-top: 1px solid #fff;
+  }
+}
+
+
+.alert {
+  color: #c1d55f;
+  padding: $half-spacing-unit;
 }

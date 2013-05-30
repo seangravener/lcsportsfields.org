@@ -39,7 +39,7 @@ $use-split:         true;
 $use-this-or-this:  false;
 $use-link-complex:  false;
 $use-flyout:        false;
-$use-arrows:        false;
+$use-arrows:        true;
 $use-sprite:        true;
 $use-icon-text:     true;
 $use-beautons:      false;
@@ -71,11 +71,23 @@ $brand-face:        VegurRegular, Ariel, "Helvetica Neue", sans-serif;
  */
 
 @import "compass/css3";
+@import "compass/typography";
 
+$white:					#fff;
 $black:       #000;
 $darkGray:    #222;
 $green: 	  #6b0c36;
 $fieldGreen:  #016117;
+$smoke:  		#efefef;
+$whiteSmoke:  	#f5f5f5;
+
+// articles
+$announcement-primary: 	#7d83d3;
+$annoucement-title: 	#016117;
+
+$event-primary: 		#016218;
+$event-title: 			$annoucement-title;
+$event-lightest: 		#cce0d1;
 
 $border-radius: 4px;
 

@@ -30,6 +30,10 @@
       left: 50%; margin-left: -4px; // align to center
     }
   }
+
+  li.nav--icon {
+  	display: none;
+  }
 }
 
 .nav--dropdown li {
@@ -83,4 +87,14 @@
 	
 	}
 
+}
+
+@include media-query(portable) {
+	.nav--top li {
+		display: none;
+	}
+
+	.nav--top li.nav--icon {
+		display: inline-block;
+	}
 }
