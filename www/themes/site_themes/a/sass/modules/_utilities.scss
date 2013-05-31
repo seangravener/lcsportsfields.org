@@ -46,16 +46,22 @@
   float: left;
 }
 
+/* inline block for ie */
+@mixin ie-inline-block {
+    zoom: 1;
+    *display: block;
+}
+
 /* 
  * http://css-tricks.com/snippets/css/layered-paper/ 
  */
 @mixin layered-paper ($border-color, $shadow-color) {
     box-shadow:
-        0 1px 1px $shadow-color,
+        0 1px 0px $shadow-color,
         0 10px 0 -5px $border-color,
-        0 10px 1px -4px $shadow-color,
+        0 10px 0px -4px $shadow-color,
         0 20px 0 -10px $border-color,
-        0 20px 1px -9px $shadow-color;
+        0 20px 0px -9px $shadow-color;
 }
 
 // create equilateral triangles (from zurb fondation)
