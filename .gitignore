@@ -24,11 +24,7 @@ www/uploads/member/avatars/uploads/*
 www/uploads/member/photos/*
 www/uploads/member/pm_attachments/*
 www/uploads/member/signature_attachments/*
-
-# compiled assets
-# */css/
-# *min.js
-www/themes/site_themes/a/css/
+www/uploads/images/*
 
 # Caches
 sized/
@@ -36,6 +32,15 @@ thumbs/
 _thumbs/
 system/expressionengine/cache/*
 
-ee_config_bootstrap.php
+# Generated
+# */css/
+# *min.js
+www/themes/site_themes/a/css/
+
+# Third Party
 expressionengine/
 codeigniter/
+www/themes/third_party
+
+# Configs
+ee_config_bootstrap.php
