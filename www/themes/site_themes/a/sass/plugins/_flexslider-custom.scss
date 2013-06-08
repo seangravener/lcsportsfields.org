@@ -77,40 +77,87 @@ html[xmlns] .slides {display: block;}
 
 .carousel li {margin-right: 5px}
 
+.flexslider .slides li {
+	max-height: 350px;
+	overflow: hidden;
+
+	a {
+		color: #fff;
+
+		&:hover {
+			text-decoration: underline;
+		}
+	}
+}
+
 .flex-caption {
 	position: absolute;
 	color: #fff;
 	width: 100%;
 
-	// default
-	top: 90px;
-	left: 75px;
+	// top: 90px;
+	// left: 75px;
 
-	&.top-left {
+	// default
+	&.caption--top-left {
 		text-align: left;
 		top: 90px;
 		left: 75px;
+
+		.flex-caption-title,
+		.flex-caption-body {
+			float: left;
+			clear: both;
+		}
 	}
 
-	a {
-		color: #fff;
+	&.caption--top-right {
+		text-align: right;
+		top: $base-spacing-unit;
+		right: $base-spacing-unit;
+
+		.flex-caption-title,
+		.flex-caption-body {
+			float: right;
+			clear: both;
+		}
 	}
+
+	&.caption--bottom-left {
+		text-align: left;
+		bottom: $base-spacing-unit;
+		left: $base-spacing-unit;
+
+		.flex-caption-title,
+		.flex-caption-body {
+			float: left;
+			clear: both;
+		}
+
+	}
+
+	&.caption--bottom-right {
+		text-align: right;
+		bottom: $base-spacing-unit;
+		right: $base-spacing-unit;
+
+		.flex-caption-title,
+		.flex-caption-body {
+			float: right;
+			clear: both;
+		}
+	}
+
 }
+
+.flex-caption-body,
 .flex-caption-title {
 	background: $fieldGreen;
-	background: rgba(1, 97, 23, 0.8);
-	
-
+	background: rgba(1, 97, 23, 0.7);
 	padding: 5px 10px;
-	margin-bottom: 5px;
-	display: inline;
+	margin-bottom: 1px;
 }
 .flex-caption-body {
-	background: $fieldGreen;
-	background: rgba(1, 97, 23, 0.8);
-	
-	padding: 5px 10px;
-	margin-bottom: 5px;
 	max-width: 33%;
 }
 
