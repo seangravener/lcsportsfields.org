@@ -1,26 +1,10 @@
-{embed="_common/.head"
-  body_class="{embed:body_class}"
-  page_title="{embed:page_title}"
-}
-
-{embed="_common/.header"
-  page_title="{embed:page_title}"
-}
-
-{embed="home/.slider"
-  page_title="{embed:page_title}"
-}
-
-{!-- embed="home/.content"
-  page_title="{embed:page_title}"
---}
-
 <section class="page__main-content  content--alt-row">
-  <div class="container  content-box">
-    
-    <header class="page__title  content--full-width  page--use-divider">
-      <h1>{embed:page_title}</h1>
-    </header>
+
+ <div class="container  content-box">
+
+<header class="page__title  content--full-width  page--use-divider">
+  <h1>Announcements & other cool stuff</h1>
+</header>
     
     <div class="grid">
 
@@ -47,7 +31,7 @@
     --></div>
     </div><!--
      
-  --><div class="grid__item  {embed:main_span}">
+  --><div class="grid__item  two-thirds  palm-one-whole">
         <div class="content__column  content--no-bg">
           
           <article class="article__summary  summary--announce">
@@ -59,14 +43,6 @@
               <span>Published on May 5th, 2013</span>
             </span>
             
-            {exp:channel:entries}
-
-            title: {title}
-            {use_as_featured}
-            {image:url}
-            {/use_as_featured}
-            {/exp:channel:entries}
-
             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
             
 
@@ -108,7 +84,7 @@
         </div>
       </div><!-- 
 
-   -->{if embed:sidebar_span != ""}<div class="grid__item  {embed:sidebar_span}">
+   --><div class="grid__item  one-third  palm-one-whole">
         <div class="content__column  content--banner-title">
           <h3>Field Schedule</h3>
           Field Status: all open
@@ -124,30 +100,14 @@
       <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=lcsfasoccer%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="250" height="300" frameborder="0" scrolling="no"></iframe>
 
         </div>
-      </div>{/if}
+      </div><!--
+
+   --><div class="grid__item  one-whole">
+        <div class="content__column">
+          content2
+        </div>
+      </div>
 
     </div>
   </div>
 </section>
-
-
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="span{embed:main_span} content">
-      {embed="{embed:target}"
-        group_id="{embed:group_id}"
-        channel="{embed:channel}"
-        category="{embed:category}"
-        order_id="{embed:order_id}"
-      }
-    </div>
-    {if embed:sidebar_span > 0}
-    <div class="span{embed:sidebar_span} sidebar">
-      {embed="{embed:sidebar}"}
-    </div>
-    {/if}
-  </div>
-</div> -->
-
-{embed="_common/.footer"}

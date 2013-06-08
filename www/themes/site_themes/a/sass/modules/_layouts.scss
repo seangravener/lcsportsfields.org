@@ -12,13 +12,15 @@ body {
 
 .container {
   max-width: $content_max-width;
+  padding: 0 $base-spacing-unit;
   margin: auto;
 }
 
 .content-box {
   border-left: 5px solid #222;
   border-right: 5px solid #222;
-  box-sizing: content-box;
+  // box-sizing: content-box;
+  // -moz-box-sizing: content-box;
 }
 
 // $main-layout: smart;
@@ -27,12 +29,13 @@ body {
 
 .page-header {
   margin: 5px 0;
-  background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -340px;
+  background: #578b40;
   min-height: 50px;
-  border-bottom: 1px solid #000;
+  // border-bottom: 1px solid #000;
 
   .container {
     position: relative;
+    background: #578b40 image-url('bg_soccer-lg.jpg') no-repeat center -340px;
   }
 }
 
@@ -52,18 +55,33 @@ body {
   // }
 
   .container {
-    background: #999;
+    // background: lighten(#999, 25%);
+    background: #D9D9D9;
   }
+}
 
-  .content__column {    
-    margin-bottom: $base-spacing-unit;
-    padding: $base-spacing-unit;
-    background: #efefef;
-    // border-top: 1px solid #fff;
+.content__column {    
+  margin-bottom: $base-spacing-unit;
+  padding: $base-spacing-unit;
+  background: #efefef;
+  // border-top: 1px solid #fff;
 
-    // border-bottom: 3px solid #464646;
-    border-bottom: 5px solid #7D83D3;
+  // border-bottom: 3px solid #464646;
+  // border-bottom: 5px solid #7D83D3;
+  border-bottom: 5px solid #222;
+
+  &.content--no-bg {
+    background: none;
+    border-bottom: none;
+    padding: 0;
   }
+}
+
+.content--full-width {
+  margin: 0 (-$base-spacing-unit);
+  margin-bottom: $base-spacing-unit;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .content--alt-row {
@@ -118,6 +136,11 @@ body {
   }
 }
 
+.page--use-divider {
+  border-bottom: 5px solid #222;
+  margin-bottom: 0;
+}
+
 // $banner-bg: #7D83D3; 
 $banner-bg: $fieldGreen; 
 .content--banner-title {
@@ -128,18 +151,18 @@ $banner-bg: $fieldGreen;
   }
 
   &:after {
-      content: "";
-      border-color: transparent darken($banner-bg, 5%) transparent transparent;
-      border-style: solid;
-      border-width: $base-spacing-unit / 2;
-      height: 0px;
-      width: 0px;
-      position: absolute;
-      // right: -70px;
-      left: -$base-spacing-unit;
-      top: $base-spacing-unit;
-      // z-index: 1;
-    }
+    content: "";
+    border-color: transparent darken($banner-bg, 5%) transparent transparent;
+    border-style: solid;
+    border-width: $base-spacing-unit / 2;
+    height: 0px;
+    width: 0px;
+    position: absolute;
+    // right: -70px;
+    left: -$base-spacing-unit;
+    top: $base-spacing-unit;
+    // z-index: 1;
+  }
 
   h3 {
     background: $banner-bg;
@@ -157,3 +180,4 @@ $banner-bg: $fieldGreen;
 
   }
 }
+
