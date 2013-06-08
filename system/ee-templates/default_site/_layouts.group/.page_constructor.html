@@ -18,111 +18,77 @@
 <section class="page__main-content  content--alt-row">
   <div class="container  content-box">
     
-    <header class="page__title  content--full-width  page--use-divider">
+<!--     <header class="page__title  content--full-width  page--use-divider">
       <h1>{embed:page_title}</h1>
-    </header>
+    </header> -->
     
     <div class="grid">
 
-      <div class="grid__item  one-whole">
-        <div class="content__column  content--full-width">
+      <div class="grid__item one-whole">
+          <div class="content__column">
+<div class="content__item">
+  <article class="article__summary  summary--paper-layers  summary--announce">
+    
+    <span class="article__type">Announcement</span>
+    <h1 class="article__title">LCSFA has a New Website!</h1>
+   
+    <span class="article__pub-date">
+      <span>Published on May 5th, 2013</span>
+    </span>
+    
+    {exp:channel:entries}
 
-          <div class="grid__item  one-third  palm-one-whole  text-center">
-              <h3>About the LCSFA</h3>
-              Get directions to the fields.
-              <a href="" title="">image</a>
-          </div><!--
+    title: {title}
+    {use_as_featured}
+    {image:url}
+    {/use_as_featured}
+    {/exp:channel:entries}
 
-        --><div class="grid__item  one-third  palm-one-whole  text-center">
-              <h3>Get Directions</h3>
-              Get directions to the fields.
-              <a href="" title="">image</a>
-          </div><!--
+    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+    
 
-       --><div class="grid__item  one-third  palm-one-whole  text-center">
-             <h3>Schedule Field Time</h3>
-              <a href="" title="">image</a>
-          </div><!--
+    <footer class="article__footer cf">
+    
+      <div class="float-left">
+        <a href="" title="">See all announcements</a>
+      </div><div class="float-right">
+        <a href="" title="">Continue Reading ... </a>
+      </div>
+    
+    </footer>
+  </article>
+</div>
+</div>
+      </div><!--
 
-    --></div>
-    </div><!--
-     
-  --><div class="grid__item  {embed:main_span}">
-        <div class="content__column  content--no-bg">
-          
-          <article class="article__summary  summary--announce">
-            
-              <span class="article__type">Announcement</span>
-              <h1 class="article__title">LCSFA has a New Website!</h1>
-           
-            <span class="article__pub-date">
-              <span>Published on May 5th, 2013</span>
-            </span>
-            
-            {exp:channel:entries}
-
-            title: {title}
-            {use_as_featured}
-            {image:url}
-            {/use_as_featured}
-            {/exp:channel:entries}
-
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            
-
-            <footer class="article__footer cf">
-            
-              <div class="float-left">
-                <a href="" title="">See all announcements</a>
-              </div><div class="float-right">
-                <a href="" title="">Continue Reading ... </a>
-              </div>
-            
-            </footer>
-          </article>
-
-          <article class="article__summary  summary--event">
-            
-              <span class="article__type">Event</span>
-              <h1 class="article__title">LCSFA has a New Website!</h1>
-           
-            <span class="article__pub-date">
-              <span>Published on May 5th, 2013</span>
-            </span>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-
-             <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-            
-
-            <footer class="article__footer cf">
-              <div class="float-left">
-                <a href="" title="">See all announcements</a>
-              </div>
-              <div class="float-right">
-                <a href="" title="">Continue Reading ... </a>
-              </div>
-            </footer>
-
-          </article>
-
-        </div>
+      --><div class="grid__item  {embed:main_span}">
+         
+            {embed="{embed:target}"
+              group_id="{embed:group_id}"
+              channel="{embed:channel}"
+              category="{embed:category}"
+              order_id="{embed:order_id}"
+            }
+         
       </div><!-- 
 
    -->{if embed:sidebar_span != ""}<div class="grid__item  {embed:sidebar_span}">
-        <div class="content__column  content--banner-title">
-          <h3>Field Schedule</h3>
-          Field Status: all open
-        </div>
+        <div class="page__sidebar">
+          <div class="sidebar__item  content--banner-title">
+            <h3>Field Schedule</h3>
+            Field Status: all open
+          </div>
 
-        <div class="content__column  content--banner-title">
-          <h3>Field Schedule</h3>
-          <p>Field Status: all open</p>
-        </div>
+          <div class="sidebar__item  content--banner-title">
+            <h3>Field Schedule</h3>
+            <p>Field Status: all open</p>
+          </div>
 
-        <div class="content__column">
-          
-      <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=lcsfasoccer%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="250" height="300" frameborder="0" scrolling="no"></iframe>
+          <div class="sidebar__item">
+            
+        <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=lcsfasoccer%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="250" height="300" frameborder="0" scrolling="no"></iframe>
 
+          </div>
         </div>
       </div>{/if}
 

@@ -12,8 +12,14 @@ body {
 
 .container {
   max-width: $content_max-width;
-  padding: 0 $base-spacing-unit;
+  // padding: 0 $base-spacing-unit;
+  // padding-top: $base-spacing-unit;
   margin: auto;
+}
+
+.lt-ie9 .container {
+  // ie8 border-box isn't cooperating, so i'll set a fixed width
+  width: $content_max-width + 10px; // add border width
 }
 
 .content-box {
@@ -60,15 +66,31 @@ body {
   }
 }
 
-.content__column {    
-  margin-bottom: $base-spacing-unit;
+.content__column {
+  // border-right: 5px solid #222;
+  padding-right: $base-spacing-unit;
+  background: $smoke;
   padding: $base-spacing-unit;
-  background: #efefef;
+  border-bottom: 5px solid #222;
+
+  &:last-child {
+    border-bottom: 0;
+  }
+}
+@include media-query(lap-and-up) {
+  .content__column {
+    border-right: 5px solid #222; }
+}
+
+.content__item {    
+  margin-bottom: $base-spacing-unit;
+  // padding: $base-spacing-unit;
+  // background: #efefef;
   // border-top: 1px solid #fff;
 
   // border-bottom: 3px solid #464646;
   // border-bottom: 5px solid #7D83D3;
-  border-bottom: 5px solid #222;
+  // border-bottom: 5px solid #222;
 
   &.content--no-bg {
     background: none;
@@ -86,6 +108,11 @@ body {
 
 .content--alt-row {
   background: #578b40 image-url('bg_field.jpg') repeat;
+}
+
+.content--pop-it {
+  background: #333;
+  color: #fff;
 }
 
 .alert {
@@ -146,7 +173,8 @@ $banner-bg: $fieldGreen;
 .content--banner-title {
   position: relative;
 
-  &.content__column {
+  &.sidebar__item,
+  &.content__item {
      border-bottom: 5px solid $banner-bg;
   }
 

@@ -1,0 +1,11 @@
+.page__sidebar {
+	padding-top: $base-spacing-unit;
+	padding-right: $base-spacing-unit;
+}
+
+.sidebar__item {
+  margin-bottom: $base-spacing-unit;
+  padding: $base-spacing-unit;
+  background: #efefef;
+  border-bottom: 5px solid #222;
+}
