@@ -1,38 +1,24 @@
 <section class="flex-container">
   <div class="flexslider  page--use-divider">
     <ul class="slides">
-      <li>
-        <a href="" title="title tag">
-          <img src="/uploads/images/test-1.jpg" />
+      {exp:channel:entries channel="news" {global:param_disable_default} }
+      {if featured_slide_on}
+      {featured_slide limit="1"}
+       <li>
+        <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="View {title}">
+          <img src="{image:url}" />
+        
+        <article class="flex-caption  {caption_location}">
+          <h2 class="flex-caption-title">{title}</h2>
+          {if image:description}<div class="flex-caption-body">
+            {image:description}
+          </div>{/if}
+        </article>
         </a>
-        <article class="flex-caption">
-          <h2 class="flex-caption-title">Game On!</h2>
-          <div class="flex-caption-body">
-            <a href="">Captions</a> and cupcakes. Winning combination.
-          </div>
-        </article>
       </li>
-      <li data-thumb="/uploads/images/test-1-thumb.jpg">
-        <a href=""><img src="/uploads/images/test-1.jpg" /></a>
-         <article class="flex-caption">
-          <h2 class="flex-caption-title">Game On!</h2>
-          <div class="flex-caption-body">
-            <a href="">Captions</a> and cupcakes. Winning combination.
-          </div>
-        </article>
-      </li>
-      <li data-thumb="/uploads/images/test-1-thumb.jpg">
-        <img src="/uploads/images/test-1.jpg" />
-         <article class="flex-caption">
-          <h2 class="flex-caption-title">Game On!</h2>
-          <div class="flex-caption-body">
-            <a href="">Captions</a> and cupcakes. Winning combination.
-          </div>
-        </article>
-      </li>
-      <li title="hover" data-thumb="/uploads/images/test-1-thumb.jpg">
-        <img src="/uploads/images/test-1.jpg" />
-      </li>
+      {/featured_slide}
+      {/if}
+      {/exp:channel:entries}
     </ul>
   </div>
 </section>
