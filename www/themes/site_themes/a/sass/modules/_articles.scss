@@ -27,12 +27,13 @@ $announce: #7d83d3;
 
 .content--has-article-type .article__type {
   display: block;
-  background: $fieldGreen;
+  background: #444;
   color: $smoke;
   margin: -$base-spacing-unit;
   margin-bottom: $half-spacing-unit;
   padding: $half-spacing-unit;
-  @include arrow(bottom, left, $fieldGreen);
+  
+  // @include arrow(bottom, left, #444);
 }
 
 .article__title {

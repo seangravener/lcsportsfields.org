@@ -40,7 +40,7 @@ www/themes/site_themes/a/css/
 # Third Party
 expressionengine/
 codeigniter/
-www/themes/third_party
+www/themes/third_party/
 
 # Configs
 ee_config_bootstrap.php

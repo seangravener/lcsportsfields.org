@@ -1,26 +1,24 @@
+{exp:channel:entries channel="{embed:channel}" limit="{embed:limit}" category="{embed:category}" paginate="bottom" {global:param_disable_default}}
+{if featured_slide_on != "y"}
 <div class="content__column">
   <div class="content__item  content--has-article-type">
-    <article class="article__summary ">
-      
+    
+    <article class="article__summary ">     
       <span class="article__type">Announcement</span>
       
-      <h1 class="article__title">LCSFA has a New Website!</h1>
+      {if segment_3}
+      <h2 class="article__title">{title}</h2>
+      {if:else}
+      <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
+        <h2 class="article__title">{title}</h2>
+      </a>
+      {/if}
+
       <span class="article__pub-date">
-        <span>Published on May 5th, 2013</span>
+        <span>Published on {entry_date format="%F %j%S, %Y"}</span>
       </span>
      
-      
-      
-      {exp:channel:entries}
-
-      title: {title}
-      {use_as_featured}
-      {image:url}
-      {/use_as_featured}
-      {/exp:channel:entries}
-
-      <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-      
+      {main_content_body}
 
       <footer class="article__footer cf">
       
@@ -32,8 +30,26 @@
       
       </footer>
     </article>
+
   </div>
 </div>
+{/if}
+
+{paginate}{pagination_links}
+<div class="content__column">
+  <ol class="nav pagination">
+      {first_page}<li class="pagination__first"><a href="{pagination_url}">First</a></li>{/first_page}<!--
+   -->{previous_page}<li class="pagination__prev"><a href="{pagination_url}">Previous</a></li>{/previous_page}<!--
+   -->{page}<li{if current_page} class="current"{/if}><a href="{pagination_url}">{pagination_page_number}</a></li>{/page}<!--
+   -->{next_page}<li class="pagination__next"><a href="{pagination_url}">Next</a></li>{/next_page}<!--
+   -->{last_page}<li class="pagination__last"><a href="{pagination_url}">Last</a></li>{/last_page}
+  </ol>
+</div>
+{/pagination_links}{/paginate}
+
+{/exp:channel:entries}
+
+{!-- 
 
 <div class="content__column content--pop-it">
   <div class="content__item">
@@ -98,3 +114,5 @@
   </article>
 </div>
 </div>
+
+--}

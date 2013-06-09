@@ -72,14 +72,16 @@ body {
   background: $smoke;
   padding: $base-spacing-unit;
   border-bottom: 5px solid #222;
+  border-right: 5px solid #222; 
 
   &:last-child {
-    border-bottom: 0;
+    // border-bottom: 0;
   }
 }
-@include media-query(lap-and-up) {
+@include media-query(palm) {
   .content__column {
-    border-right: 5px solid #222; }
+    border-right: none; 
+  }
 }
 
 .content__item {    
@@ -100,10 +102,20 @@ body {
 }
 
 .content--full-width {
-  margin: 0 (-$base-spacing-unit);
+  // margin: 0 (-$base-spacing-unit);
   margin-bottom: $base-spacing-unit;
   padding-left: 0;
   padding-right: 0;
+}
+
+.content__column.content--full-width {
+  padding: 0;
+  margin: 0;
+  border-right: none;
+
+  .content__item {
+    margin: 0;
+  }
 }
 
 .content--alt-row {

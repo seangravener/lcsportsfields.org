@@ -7,9 +7,11 @@
   page_title="{embed:page_title}"
 }
 
-{embed="home/.slider"
-  page_title="{embed:page_title}"
-}
+{if segment_2 == ""}
+  {embed="home/.slider"
+    page_title="{embed:page_title}"
+  }
+{/if}
 
 {!-- embed="home/.content"
   page_title="{embed:page_title}"
@@ -18,50 +20,25 @@
 <section class="page__main-content  content--alt-row">
   <div class="container  content-box">
     
-<!--     <header class="page__title  content--full-width  page--use-divider">
-      <h1>{embed:page_title}</h1>
-    </header> -->
+    {if segment_2}
+    <header class="page__title  content--full-width  page--use-divider">
+      <h1>{exp:low_title:channel channel_name="{segment_1}"}</h1>
+    </header>
+    {/if}
     
     <div class="grid">
 
-      <div class="grid__item one-whole">
-          <div class="content__column">
-<div class="content__item">
-  <article class="article__summary  summary--paper-layers  summary--announce">
-    
-    <span class="article__type">Announcement</span>
-    <h1 class="article__title">LCSFA has a New Website!</h1>
-   
-    <span class="article__pub-date">
-      <span>Published on May 5th, 2013</span>
-    </span>
-    
-    {exp:channel:entries}
-
-    title: {title}
-    {use_as_featured}
-    {image:url}
-    {/use_as_featured}
-    {/exp:channel:entries}
-
-    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
-    
-
-    <footer class="article__footer cf">
-    
-      <div class="float-left">
-        <a href="" title="">See all announcements</a>
-      </div><div class="float-right">
-        <a href="" title="">Continue Reading ... </a>
+      <div class="grid__item  one-whole">
+      <div class="content__column  content--full-width">
+        <div class="content__item">
+      <div class="flexible-container">
+    <iframe width="425" height="150" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.ch/maps?f=q&amp;source=s_q&amp;hl=de&amp;geocode=&amp;q=Bern&amp;aq=&amp;sll=46.813187,8.22421&amp;sspn=3.379772,8.453979&amp;ie=UTF8&amp;hq=&amp;hnear=Bern&amp;t=m&amp;z=12&amp;ll=46.947922,7.444608&amp;output=embed&amp;iwloc=near"></iframe>
+    </div>
+        </div>
       </div>
-    
-    </footer>
-  </article>
-</div>
-</div>
-      </div><!--
+    </div><!--
 
-      --><div class="grid__item  {embed:main_span}">
+    --><div class="grid__item  {embed:main_span}">
          
             {embed="{embed:target}"
               group_id="{embed:group_id}"
