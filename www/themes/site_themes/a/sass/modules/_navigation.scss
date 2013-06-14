@@ -2,6 +2,7 @@
   text-align: right;
   margin: 0 .8em 0 0; 
   padding: .8em 0;
+  display: block;
 
   > li {
     margin-left: .8em;
@@ -17,6 +18,7 @@
     @include border-radius($border-radius);
   }
 
+  > li:hover,
   li.active { 
     a {
       background: #fff;
@@ -30,10 +32,12 @@
       left: 50%; margin-left: -4px; // align to center
     }
   }
+}
 
-  li.nav--icon {
-  	display: none;
-  }
+
+li.nav--icon,
+.nav--top-portable {
+	display: none;
 }
 
 .nav--dropdown li {
@@ -89,12 +93,112 @@
 
 }
 
+
 @include media-query(portable) {
-	.nav--top li {
-		display: none;
+
+	.nav--top-portable {
+		display: block;
 	}
 
 	.nav--top li.nav--icon {
 		display: inline-block;
+	}
+
+	.nav--top.nav--portable {
+		// list-style-type: none;
+		display: none;
+		padding: $half-spacing-unit;
+		margin: 0;
+		background: #222;
+
+		> li {
+			// border-bottom: 1px solid #444;
+		}
+
+		li {
+			// margin: 0 0 $half-spacing-unit 0;
+			margin: 0 0 1px 0;
+			display: block;
+			background: #333;
+			@include border-radius($border-radius);
+
+			a {
+				background: transparent;
+				color: #fff;
+				padding: $half-spacing-unit;;
+				margin: 0;
+
+			}
+
+			&:after { display :none; }
+		}
+
+	}
+
+	.nav--dropdown li {
+		z-index: 1;
+
+		&:hover > .nav--dropdown--menu,
+		> .nav--dropdown--menu {
+			padding-top: 0px;
+			position: static;
+			text-align: right;
+			display: none;
+		}
+
+		.nav--block {
+			margin: $half-spacing-unit;
+			margin-top: 0;
+		}
+
+		> .nav--dropdown--menu > ul {
+			background: transparent; 
+			list-style: none;
+			border: none;
+		}
+
+		> .nav--dropdown--menu > ul li {
+			padding: 0;
+			float: none;
+			position: relative;
+			// @include arrow(top, right, #BADA55); 
+
+		}
+
+		> .nav--dropdown--menu > ul a {
+			white-space: nowrap;
+			background: #444;
+			@include border-radius($border-radius);
+		}
+
+		> .nav--dropdown--menu > ul a span {
+			display: block;
+			margin-top: 3px;
+			color: #999;
+			font-size: .8em;
+		}
+
+		a { 
+			text-decoration: none;
+		}
+
+		&:hover {
+
+	 		> .nav--dropdown--menu { 
+				right: 0;
+			}
+			ul li a:hover {
+				background: transparent;
+				color: #fff;
+			}
+		
+		}
+	}
+}
+
+@include media-query(palm) {
+	.nav--top li.nav--icon {
+		display: block;
+		text-align: center;
 	}
 }

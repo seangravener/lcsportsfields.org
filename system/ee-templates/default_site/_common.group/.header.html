@@ -14,16 +14,35 @@
 			Lehigh County Sports Fields
 		</a>
 
-		<!-- <div class="grid  desk-two-thirds  lap-one-half  one-whole"> -->
-		<ul class="nav  nav--top  nav--dropdown  list--inline">
-			
-      <li>
-        <a href="">News &amp; Blog</a>
+    <!-- mobile menu item -->
+    <ul class="nav  nav--top  nav--top-portable  nav--dropdown  list--inline">   
+      <li class="nav--icon"><a id="mobile__menu-selector" href="#">Menu</a></li>
+    </ul>
+
+    <!-- main nav items -->
+    <!-- <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline cf">
+      
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
       </li>
 
-      <li>
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
+            <li><a href="{path=news}">
+              {category_name}
+              {if category_description}<span>short description desribing this item</span>{category_description}{/if}
+            </a></li>
+            {/exp:channel:categories}
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "calendar"} class="active"{/if}>
         <a href="">Calendar</a>
-        <div class="nav--dropdown--menu">
+        <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
               Events Schedule
@@ -37,9 +56,43 @@
         </div>
       </li>
 
-      <li>
+    </ul> -->
+
+    <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline">
+			
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
+            <li><a href="{path=news}">
+              {category_name}
+              {if category_description}<span>short description desribing this item</span>{category_description}{/if}
+            </a></li>
+            {/exp:channel:categories}
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "calendar"} class="active"{/if}>
+        <a href="">Calendar</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              Events Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Field Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "info"} class="active"{/if}>
         <a href="">Coaches &amp; Teams</a>
-        <div class="nav--dropdown--menu">
+        <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
               Fields Map
@@ -61,9 +114,9 @@
         </div>
       </li>
 
-      <li class="active">
+      <li{if segment_1 == "directions"} class="active"{/if}>
         <a href="">Directions</a>
-        <div class="nav--dropdown--menu">
+        <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
               Get Directions
@@ -75,9 +128,9 @@
         </div>
       </li>
 
-      <li>
+      <li{if segment_1 == "about"} class="active"{/if}>
         <a href="">About Us</a>
-        <div class="nav--dropdown--menu">
+        <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
               About the LCSFA
@@ -103,8 +156,6 @@
         </div>
       </li>
 
-      <li class="nav--icon"><a href="">Menu</a></li>
-      
 		</ul>
 
 	</div>
