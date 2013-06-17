@@ -1,38 +1,123 @@
 {exp:channel:entries channel="{embed:channel}" limit="{embed:limit}" category="{embed:category}" paginate="bottom" {global:param_disable_default}}
 {if featured_slide_on != "y"}
+
 <div class="content__column">
-  <div class="content__item  content--has-article-type">
-    
-    <article class="article__summary ">     
-      <span class="article__type">Announcement</span>
-      
-      {if segment_3}
-      <h2 class="article__title">{title}</h2>
-      {if:else}
-      <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
-        <h2 class="article__title">{title}</h2>
-      </a>
-      {/if}
+  {exp:switchee variable="{channel_name}" parse="inward"}
+    {case value="news" default="yes"}
+        <div class="content__item  content--has-article-type">
+          <article class="article__summary ">     
+            
+            <span class="article__type">{channel}</span>
+            
+            {if segment_3}
+            <h2 class="article__title">{title}</h2>
+            {if:else}
+            <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
+              <h2 class="article__title">{title}</h2>
+            </a>
+            {/if}
 
-      <span class="article__pub-date">
-        <span>Published on {entry_date format="%F %j%S, %Y"}</span>
-      </span>
-     
-      {main_content_body}
+            <span class="article__pub-date">
+              <span>Published on {entry_date format="%F %j%S, %Y"}</span>
+            </span>
+           
+            {main_content_body}
 
-      <footer class="article__footer cf">
-      
-        <div class="float-left">
-          <a href="" title="">See all announcements</a>
-        </div><div class="float-right">
-          <a href="" title="">Continue Reading ... </a>
-        </div>
-      
-      </footer>
-    </article>
+            <footer class="article__footer cf">
+              <div class="float-left">
+                <a href="" title="">See all announcements</a>
+              </div><div class="float-right">
+                <a href="" title="">Continue Reading ... </a>
+              </div>
+            </footer>
 
-  </div>
-</div>
+          </article>
+        </div><!-- /.content__item  -->
+    {/case}
+    {case value="events"}
+        <div class="content__item  content--has-article-type">
+          <article class="article__summary ">     
+            
+            <span class="article__type">{channel}</span>
+            
+            {if segment_3}
+            <h2 class="article__title">{title}</h2>
+            {if:else}
+            <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
+              <h2 class="article__title">{title}</h2>
+            </a>
+            {/if}
+           
+            <table class="table--bordered  table--data">
+              <tr>
+                <th>Date</th>
+                <td>{if event__date}{event__date format="%F %j%S, %Y"}{if:else}TBD{/if}</td>
+              </tr>
+              <tr>
+                <th>Time</th>
+                <td>
+                  {if event__start-time}{event__start-time format="%g:%i%a"}{if:else}TBD{/if}
+                  {if event__end-time} to {event__end-time format="%g:%i%a"}{/if}
+                </td>
+              </tr>
+              {event__location}
+              {if location_name}
+              <tr>
+                <th>Location</th>
+                <td>
+                  {if location_website}
+                    <a href="{location_website}" target="_blank" title="Open {location_name} website in new window"><strong>{location_name}</strong></a>
+                  {if:else}
+                    <strong>{location_name}</strong>
+                  {/if}
+                  {location_address}
+                    {if street}
+                      <br>{street}<br>
+                      {if street_2}{street_2}<br>{/if}
+                      {city}, {region} {postal_code}<br>
+                      <a href="{location_address:map_url source="google" include_name="yes"}" target="_blank">View Map (opens in new window)</a>
+                    {/if}
+                  {/location_address}
+                </td>
+              </tr>
+              {/event__location}
+              {event__sponsors}
+              {if sponsor_name}
+              <tr>
+                <th>Event Sponsor</th>
+                <td>
+                  {if sponsor_website}
+                    <a href="{sponsor_website}" target="_blank" title="Open {sponsor_name} website in new window"><strong>{sponsor_name}</strong></a>
+                  {if:else}
+                    <strong>{sponsor_name}</strong>
+                  {/if}
+                  {if sponsor_image}
+                    {if sponsor_website}
+                      <a href="{sponsor_website}" target="_blank" title="Open {sponsor_name} website in new window"><img src="{sponsor_image:resized_150w}" class="float-right"><a>
+                    {if:else}
+                      <img src="{sponsor_image:resized_150w}" class="float-right">
+                    {/if}
+                </td>
+              </tr>
+              {/if}
+              {/event__sponsors}
+            </table>
+
+            {event__detail} 
+
+            <footer class="article__footer cf">
+              <div class="float-left">
+                <a href="" title="">See all announcements</a>
+              </div><div class="float-right">
+                <a href="" title="">Continue Reading ... </a>
+              </div>
+            </footer>
+            
+          </article>
+        </div><!-- /.content__item  -->
+    {/case}
+  {/exp:switchee}
+</div><!-- /.content__column  -->
 {/if}
 
 {paginate}{pagination_links}
