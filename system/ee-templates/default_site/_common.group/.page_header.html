@@ -1,0 +1,162 @@
+<!-- 
+<section class="alert">
+  <div class="container">
+    Today's game is cancelled!
+  </div>
+</section> -->
+
+<!-- include js cloned ul for mobile menu -->
+
+<header class="page-header">
+	<div class="container  content-box">
+	
+		<a href="{path=SITE_INDEX}" class="page-logo">
+			Lehigh County Sports Fields
+		</a>
+
+    <!-- mobile menu item -->
+    <ul class="nav  nav--top  nav--top-portable  nav--dropdown  list--inline">   
+      <li class="nav--icon"><a id="mobile__menu-selector" href="#">Menu</a></li>
+    </ul>
+
+    <!-- main nav items -->
+    <!-- <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline cf">
+      
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
+      </li>
+
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
+            <li><a href="{path=news}">
+              {category_name}
+              {if category_description}<span>short description desribing this item</span>{category_description}{/if}
+            </a></li>
+            {/exp:channel:categories}
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "calendar"} class="active"{/if}>
+        <a href="">Calendar</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              Events Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Field Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+    </ul> -->
+
+    <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline">
+			
+      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">News &amp; Blog</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
+            <li><a href="{path=news}">
+              {category_name}
+              {if category_description}<span>short description desribing this item</span>{category_description}{/if}
+            </a></li>
+            {/exp:channel:categories}
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "calendar"} class="active"{/if}>
+        <a href="">Calendar</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              Events Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Field Schedule
+              <span>short description desribing this item</span>
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "info"} class="active"{/if}>
+        <a href="">Coaches &amp; Teams</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              Fields Map
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Practice Guidelines
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Reserve a Field
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Fees
+              <span>short description desribing this item</span>
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "directions"} class="active"{/if}>
+        <a href="">Directions</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              Get Directions
+            </a></li>
+            <li><a href="">
+              Parking Guidelines
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+      <li{if segment_1 == "about"} class="active"{/if}>
+        <a href="">About Us</a>
+        <div class="nav--dropdown--menu cf">
+          <ul class="nav--block  nav--stacked">
+            <li><a href="">
+              About the LCSFA
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              History
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Partners
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Board Members
+              <span>short description desribing this item</span>
+            </a></li>
+            <li><a href="">
+              Operating Manual
+              <span>short description desribing this item</span>
+            </a></li>
+          </ul>
+        </div>
+      </li>
+
+		</ul>
+
+	</div>
+</header>

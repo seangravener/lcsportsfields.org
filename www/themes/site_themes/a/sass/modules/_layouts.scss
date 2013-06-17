@@ -74,8 +74,9 @@ body {
   border-bottom: 5px solid #222;
   border-right: 5px solid #222; 
 
+  &:only-child,
   &:last-child {
-    // border-bottom: 0;
+    border-bottom: 0;
   }
 }
 @include media-query(palm) {

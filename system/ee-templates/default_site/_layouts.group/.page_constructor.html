@@ -1,28 +1,30 @@
-{embed="_common/.head"
+{embed="_common/.page_head"
   body_class="{embed:body_class}"
   page_title="{embed:page_title}"
 }
 
-{embed="_common/.header"
+{embed="_common/.page_header"
   page_title="{embed:page_title}"
 }
 
-{if segment_2 == ""}
+{if segment_1 == ""}
   {embed="home/.slider"
     page_title="{embed:page_title}"
   }
 {/if}
 
-{!-- embed="home/.content"
-  page_title="{embed:page_title}"
---}
-
 <section class="page__main-content  content--alt-row">
   <div class="container  content-box">
     
-    {if segment_2}
+    {if segment_1}
     <header class="page__title  content--full-width  page--use-divider">
-      <h1>{exp:low_title:channel channel_name="{segment_1}"}</h1>
+      <h1>
+        {if {exp:segment_search keyword="/P\d+/" regex="yes" segments="1"}}
+          News &amp; Blog
+        {if:else}
+          {exp:low_title:channel channel_name="{segment_1}"}
+        {/if}
+      </h1>
     </header>
     {/if}
     
@@ -82,26 +84,4 @@ Enter your starting address:
   </div>
 </section>
 
-{!--
-
-<!-- <div class="container">
-  <div class="row">
-    <div class="span{embed:main_span} content">
-      {embed="{embed:target}"
-        group_id="{embed:group_id}"
-        channel="{embed:channel}"
-        category="{embed:category}"
-        order_id="{embed:order_id}"
-      }
-    </div>
-    {if embed:sidebar_span > 0}
-    <div class="span{embed:sidebar_span} sidebar">
-      {embed="{embed:sidebar}"}
-    </div>
-    {/if}
-  </div>
-</div> -->
-
---}
-
-{embed="_common/.footer"}
+{embed="_common/.page_footer"}
