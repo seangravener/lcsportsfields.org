@@ -1,0 +1,23 @@
+<div class="sidebar__item  content--banner-title">
+	<h3>Events Schedule</h3>
+    <ul class="">
+    	{exp:channel:entries channel="events" limit="10" {global:param_disable_default}}
+    	<li>
+    		<h4>{title}</h4>
+			<ul>
+				<li>Date {if event__date}{event__date format="%F %j%S, %Y"}{if:else}TBD{/if}</li>
+            <li>
+            	Time
+              	{if event__start-time}{event__start-time format="%g:%i%a"}{if:else}TBD{/if}
+              	{if event__end-time} to {event__end-time format="%g:%i%a"}{/if}
+          	</li>
+            <li>
+            	{event__location}
+				{location_name}
+				{/event__location}
+            </li>
+          </ul>
+		</li>
+		{/exp:channel:entries}
+	</ul>
+</div>
