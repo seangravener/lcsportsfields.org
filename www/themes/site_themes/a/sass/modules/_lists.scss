@@ -1,0 +1,30 @@
+.sidebar__item .list--nested {
+	list-style-type: none;
+	margin: 0;
+
+}
+
+.list--nested {
+	
+	& > li {
+		margin-bottom: $base-spacing-unit;
+		padding-bottom: $base-spacing-unit;
+		border-bottom: 1px dashed #aaa;
+	}
+
+	.item__details {
+		@include font-size (14px);
+		
+		&.items--centered {
+			text-align: center;
+			list-style-type: none;
+			margin: 0;	
+		}
+	}
+
+	.item__heading {
+		@include font-size(20px);
+		margin: 0;
+		text-align: center;
+	}
+}

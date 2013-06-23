@@ -59,8 +59,12 @@
     </ul> -->
 
     <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline">
+
+      <li{if segment_1 == ""} class="active"{/if}>
+        <a href="{path=news}">Home</a>
+      </li>
 			
-      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
+      <li{if segment_1 == "news"} class="active"{/if}>
         <a href="{path=news}">News &amp; Blog</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">

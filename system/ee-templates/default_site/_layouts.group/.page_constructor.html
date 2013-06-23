@@ -7,7 +7,7 @@
   page_title="{embed:page_title}"
 }
 
-{if segment_1 == ""}
+{if !segment_1}
   {embed="home/.slider"
     page_title="{embed:page_title}"
   }
@@ -16,6 +16,12 @@
 <section class="page__main-content  content--alt-row">
   <div class="container  content-box">
     
+    {if !segment_1}
+      {embed="home/.hero-bar"
+        page_title="{embed:page_title}"
+      }
+    {/if}
+
     {if segment_1}
     <header class="page__title  content--full-width  page--use-divider">
       <h1>
