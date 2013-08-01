@@ -7,12 +7,12 @@ jQuery( document ).ready( function($) {
 	   touch: true,
 	});
 
-/*
- * Mobile Menu
- */
-	var navTopPortable = $( ".nav--top-portable" ),
-		navPortable = $( ".nav--portable" ),
-		navMobileMenuSelector = $("#mobile__menu-selector");
+	/*
+	 * Mobile Menu
+	 */
+	var navTopPortable 			= $( ".nav--top-portable" ),
+		navPortable 			= $( ".nav--portable" ),
+		navMobileMenuSelector 	= $( "#mobile__menu-selector" );
 
 	var isPortable = function () {
 		if ( navTopPortable.css( "display" ) === "block" ) {
@@ -24,8 +24,8 @@ jQuery( document ).ready( function($) {
 	var mobileMenu = function () {
 
 		navPortable.on( "click", "> li > a", function( event ) {
-			var $this = $(this),
-				navDropdownContainer = $this.next('.nav--dropdown--menu');
+			var $this 					= $(this),
+				navDropdownContainer 	= $this.next('.nav--dropdown--menu');
 
 			if ( isPortable() ) {
 				navDropdownContainer.toggle();
@@ -42,12 +42,13 @@ jQuery( document ).ready( function($) {
 			var $this = $(this);
 			$this.parent('li').toggleClass('active');
 			navPortable.toggle();
-			console.log('menu click')
+			// console.log('menu click')
 			event.preventDefault();
 		});
 
 	}
 
+	// go!
 	mobileMenu();
 	
 });

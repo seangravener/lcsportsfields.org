@@ -28,3 +28,24 @@
 h1,h2,h3,h4 {
   font-weight: normal;
 }
+
+a,
+a:link,
+a:visited {
+  color: $linkColor;
+}
+
+a:hover {
+  color: $linkColor;
+  text-decoration: none;
+}
+
+
+/*
+ * typography helpers
+ */
+
+$namespace: 'text--'; // eg .text--highlight {}
+.#{$namespace}highlight {
+  background: $highlight;
+}

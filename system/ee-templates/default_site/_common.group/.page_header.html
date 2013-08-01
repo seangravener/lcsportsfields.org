@@ -68,8 +68,8 @@
         <a href="{path=news}">News &amp; Blog</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
-            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
-            <li><a href="{path=news}">
+            {exp:channel:categories channel="news" category_group="1" show_empty="yes" style="linear"}
+            <li><a href="/{path=news}">
               {category_name}
               {if category_description}<span>short description desribing this item</span>{category_description}{/if}
             </a></li>
@@ -133,10 +133,16 @@
       </li>
 
       <li{if segment_1 == "about"} class="active"{/if}>
-        <a href="">About Us</a>
+        <a href="/about">About Us</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
-            <li><a href="">
+            {exp:channel:entries channel="page" limit="12" category="4" {global:param_disable_extras} {global:param_cache_param}}
+            <li><a href="/{path=p}/{url_title}/{entry_id}">
+              {title}
+              {if nav__description}<span>{nav__description}</span>{/if}
+            </a></li>
+            {/exp:channel:entries}
+            <li><a href="/about">
               About the LCSFA
               <span>short description desribing this item</span>
             </a></li>
