@@ -27,6 +27,8 @@
       <h1>
         {if {exp:segment_search keyword="/P\d+/" regex="yes" segments="1"}}
           News &amp; Blog
+        {if:elseif embed:page_title}
+          {embed:page_title}
         {if:else}
           {exp:low_title:channel channel_name="{segment_1}"}
         {/if}
