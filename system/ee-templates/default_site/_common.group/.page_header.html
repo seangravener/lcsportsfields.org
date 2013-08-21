@@ -1,11 +1,8 @@
-<!-- 
-<section class="alert">
+<!-- <section class="alert">
   <div class="container">
     Today's game is cancelled!
   </div>
 </section> -->
-
-<!-- include js cloned ul for mobile menu -->
 
 <header class="page-header">
 	<div class="container  content-box">
@@ -19,49 +16,10 @@
       <li class="nav--icon"><a id="mobile__menu-selector" href="#">Menu</a></li>
     </ul>
 
-    <!-- main nav items -->
-    <!-- <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline cf">
-      
-      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
-        <a href="{path=news}">News &amp; Blog</a>
-      </li>
-
-      <li{if segment_1 == "news" || segment_1 == ""} class="active"{/if}>
-        <a href="{path=news}">News &amp; Blog</a>
-        <div class="nav--dropdown--menu cf">
-          <ul class="nav--block  nav--stacked">
-            {exp:channel:categories channel="news" show_empty="yes" style="linear"}
-            <li><a href="{path=news}">
-              {category_name}
-              {if category_description}<span>short description desribing this item</span>{category_description}{/if}
-            </a></li>
-            {/exp:channel:categories}
-          </ul>
-        </div>
-      </li>
-
-      <li{if segment_1 == "calendar"} class="active"{/if}>
-        <a href="">Calendar</a>
-        <div class="nav--dropdown--menu cf">
-          <ul class="nav--block  nav--stacked">
-            <li><a href="">
-              Events Schedule
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Field Schedule
-              <span>short description desribing this item</span>
-            </a></li>
-          </ul>
-        </div>
-      </li>
-
-    </ul> -->
-
     <ul class="nav  nav--top  nav--portable  nav--dropdown  list--inline">
 
       <li{if segment_1 == ""} class="active"{/if}>
-        <a href="{path=news}">Home</a>
+        <a href="{path=SITE_INDEX}">Home</a>
       </li>
 			
       <li{if segment_1 == "news"} class="active"{/if}>
@@ -79,7 +37,7 @@
       </li>
 
       <li{if segment_1 == "calendar"} class="active"{/if}>
-        <a href="">Calendar</a>
+        <a href="/calendar/">Calendar</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
@@ -133,35 +91,15 @@
       </li>
 
       <li{if segment_1 == "about"} class="active"{/if}>
-        <a href="/about">About Us</a>
+        <a href="{path=p/about-the-lcsfa/22}">About Us</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
-            {exp:channel:entries channel="page" limit="12" category="4" {global:param_disable_extras} {global:param_cache_param}}
+            {exp:channel:entries channel="page" limit="12" category="4" orderby="nav__orderby" sort="asc" dynamic="off" {global:param_disable_extras} {global:param_cache_param}}
             <li><a href="/{path=p}/{url_title}/{entry_id}">
               {title}
               {if nav__description}<span>{nav__description}</span>{/if}
             </a></li>
             {/exp:channel:entries}
-            <li><a href="/about">
-              About the LCSFA
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              History
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Partners
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Board Members
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Operating Manual
-              <span>short description desribing this item</span>
-            </a></li>
           </ul>
         </div>
       </li>

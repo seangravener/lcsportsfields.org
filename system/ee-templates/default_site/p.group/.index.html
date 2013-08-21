@@ -1,0 +1,35 @@
+{exp:channel:entries channel="{embed:channel}" limit="{embed:limit}" category="{embed:category}" paginate="bottom" {global:param_disable_default}}
+
+<div class="content__column">
+  <div class="content__item  content--has-article-type">
+    <article class="article__summary ">     
+      
+      <span class="article__type">{categories}{category_name}{/categories}</span>
+      
+      {if segment_3}
+      <h2 class="article__title">{title}</h2>
+      {if:else}
+      <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
+        <h2 class="article__title">{title}</h2>
+      </a>
+      {/if}
+
+      <span class="article__pub-date">
+        <span>Published on {entry_date format="%F %j%S, %Y"}</span>
+      </span>
+     
+      {main_content_body}
+
+     <!--  <footer class="article__footer cf">
+        <div class="float-left">
+          <a href="" title="">See all announcements</a>
+        </div><div class="float-right">
+          <a href="" title="">Continue Reading ... </a>
+        </div>
+      </footer> -->
+
+    </article>
+  </div><!-- /.content__item  -->
+</div><!-- /.content__column  -->
+
+{/exp:channel:entries}
