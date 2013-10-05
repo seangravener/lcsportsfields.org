@@ -57,25 +57,25 @@ jQuery( document ).ready( function($) {
 	 */
 
 	$calendar = $('#calendar__full');
-    if ( $calendar.length ) {
-      $calendar.fullCalendar({
-        eventSources: [
-            {
-              url: "https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/basic",
-              className: 'cal--default'
-            },
-            {
-              url: "https://www.google.com/calendar/feeds/mrk0g7pivn1kv3oqkqhr82r4ec%40group.calendar.google.com/public/basic",
-              className: 'cal--test'
-            }
-        ],
-        eventClick: function( e ) {
-			if (e.url) {
-			    window.open(e.url);
-			    return false;
-			}
+  if ( $calendar.length ) {
+    $calendar.fullCalendar({
+      eventSources: [
+          {
+            url: "https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/basic",
+            className: 'cal--default'
+          },
+          {
+            url: "https://www.google.com/calendar/feeds/mrk0g7pivn1kv3oqkqhr82r4ec%40group.calendar.google.com/public/basic",
+            className: 'cal--test'
+          }
+      ],
+      eventClick: function( e ) {
+		if (e.url) {
+		    window.open(e.url);
+		    return false;
 		}
-      });
-    }
+	}
+    });
+  }
 
 });

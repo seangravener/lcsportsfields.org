@@ -8,6 +8,7 @@
   <!-- plugins -->
   <script src="{global:theme_url}/js/plugins/jquery.flexslider.min.js"></script>
   <script src="{global:theme_url}/js/plugins/jquery.fullcalendar.min.js"></script>
+  <script src="{global:theme_url}/js/plugins/jquery.formatDateTime.js"></script>
   <script src="{global:theme_url}/js/plugins.js"></script>
   <script src="{global:theme_url}/js/main.js"></script>
   <!-- end scripts-->
@@ -16,6 +17,57 @@
     // $(document).ready(function() {
     //  $('#fitvids').fitVids();
     // });
+
+  $(document).ready(function() {
+    
+    url = '';
+
+    var listGcalEvents = function ( url ) {
+
+      var $template = $('#gcal__event-list-template'),
+          $eventList = $('#gcal__event-list > ul');
+
+      $.ajax({
+        type: 'GET',
+        url: url + '&alt=json-in-script',
+        dataType: 'jsonp',
+        success: function( data ) {
+
+          var entries = data.feed.entry;
+
+          $.each(entries, function( i, item ) {
+           
+            console.log(item);
+
+            var html   = $template.html(),
+                tokens = {
+                  "event_title": item.title.$t,
+                  "event_date" : item['gd$when'][0].startTime,
+                  "event_link" : item['link'][0].href
+                }
+
+            for ( token in tokens ) {
+
+              var key   = '{{' + token + '}}',
+                  value = tokens[ token ];
+
+              html = html.replace( key , value );
+
+            }
+
+            $eventList.append( html );
+
+          });
+
+        }
+
+      });
+
+    };
+
+    listGcalEvents( 'https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true' );
+
+  });
   </script>
 
   <!-- GA, hombre' -->
