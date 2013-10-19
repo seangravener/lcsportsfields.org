@@ -1,0 +1,21 @@
+.page__top-alert {
+  @include font-size(13px);
+  padding: $half-spacing-unit;
+  border-top: 5px solid #222;
+  border-left: 5px solid #222;
+  // background: #333;
+  color: #ddd;
+
+  .current-field-status {
+    float: left;
+    background: #333;
+    padding: $half-spacing-unit;
+    margin-top: -($half-spacing-unit);
+    margin-bottom: -($half-spacing-unit);
+    margin-right: $half-spacing-unit;
+    
+    span {
+      color: #fff;
+    }
+  }
+}

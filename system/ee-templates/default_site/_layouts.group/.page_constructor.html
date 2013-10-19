@@ -7,12 +7,6 @@
   page_title="{embed:page_title}"
 }
 
-{if !segment_1}
-  {embed="home/.slider"
-    page_title="{embed:page_title}"
-  }
-{/if}
-
 <section class="page__main-content  content--alt-row">
   <div class="container  content-box">
     
@@ -38,50 +32,21 @@
     
     <div class="grid">
 
-      <!-- map -->
-     <!--  <div class="grid__item  one-whole">
-        <div class="content__column  content--full-width">
-          <div class="content__item">
-
-  <form action="http://maps.google.com/maps" method="get" target="_blank">
-Enter your starting address:
-<input type="text" name="saddr" />
-<input type="hidden" name="daddr" value="Lehigh County Sports Fields, Allentown, PA" />
-<input type="submit" value="get directions" />
-</form>
-            <div class="flexible-container">
-              <iframe width="425" height="350" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lehigh+County+Sports+Fields,+Allentown,+PA&amp;aq=0&amp;oq=lehigh+county+sports+fi&amp;sll=40.336681,-75.230642&amp;sspn=1.436207,2.359314&amp;ie=UTF8&amp;hq=Lehigh+County+Sports+Fields,+Allentown,+PA&amp;ll=40.581035,-75.546774&amp;spn=0.044713,0.073729&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=5598351534588151011&amp;output=embed"></iframe>
-            </div>
-          </div>
-        </div>
-      </div> --><!--
-
-    --><div class="grid__item  {embed:main_span}">
-         
-            {embed="{embed:target}"
-              group_id="{embed:group_id}"
-              limit="{embed:limit}"
-              channel="{embed:channel}"
-              category="{embed:category}"
-              order_id="{embed:order_id}"
-            }
-         
+      <div class="grid__item  {embed:main_span}">
+     
+        {embed="{embed:target}"
+          group_id="{embed:group_id}"
+          limit="{embed:limit}"
+          channel="{embed:channel}"
+          category="{embed:category}"
+          order_id="{embed:order_id}"
+        }
+     
       </div><!-- 
 
    -->{if embed:sidebar_span != ""}<div class="grid__item  {embed:sidebar_span}">
         <div class="page__sidebar">
-          <div class="sidebar__item  content--banner-title">
-            <h3>Field Schedule</h3>
-            Field Status: all open
-          </div>
-
-          {embed="_sidebars/.events"}
-          
-          <div class="sidebar__item">
-            
-       <!--  <iframe src="https://www.google.com/calendar/embed?showTitle=0&amp;showNav=0&amp;showDate=0&amp;showPrint=0&amp;showTabs=0&amp;showCalendars=0&amp;showTz=0&amp;mode=AGENDA&amp;height=300&amp;wkst=1&amp;bgcolor=%23ffffff&amp;src=lcsfasoccer%40gmail.com&amp;color=%23875509&amp;ctz=America%2FNew_York" style=" border-width:0 " width="250" height="300" frameborder="0" scrolling="no"></iframe> -->
-
-          </div>
+          {embed="{embed:sidebar}"}
         </div>
       </div>{/if}
 

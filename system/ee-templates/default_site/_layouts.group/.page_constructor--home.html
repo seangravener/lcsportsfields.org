@@ -1,0 +1,116 @@
+{embed="_common/.page_head"
+  body_class="{embed:body_class}"
+  page_title="{embed:page_title}"
+}
+
+{exp:channel:entries channel="field_status" limit="1" {global:param_disable_extras}}
+<div class="page__top-alert">
+ <div class="container  cf">
+  <div class="current-field-status">Field Status: <span>{title}</span></div>
+  {if current_status_message}
+  <div class="no-wrap">
+      <!-- <a href="{path=p}/{url_title}/{entry_id}">{current_status_message}</a> -->
+      {current_status_message}
+  </div>
+  {/if}
+ </div>
+</div>
+{/exp:channel:entries}
+
+{embed="_common/.page_header"
+  page_title="{embed:page_title}"
+}
+
+{if !segment_1}
+  {embed="home/.slider"
+    page_title="{embed:page_title}"
+  }
+{/if}
+
+{exp:channel:entries channel="banner" limit="1" {global:param_disable_extras}}
+<section class="page__banners  content--alt-row">
+  <div class="container  content-box">
+    <div class="grid  no-gutters"><!-- 
+      
+   -->{banners}<div class="grid__item  banner_{total_rows}  palm-one-whole">
+        <div class="banner__item">
+          <a href="{banner_link}" target="_blank" title="{banner_title}" rel="no-follow"><img src="{banner_image}" alt="{banner_title}"></a>
+        </div>
+      </div><!--
+   -->{/banners}
+
+    </div>
+  </div>
+</section>
+{/exp:channel:entries}
+
+<section class="page__main-content  content--alt-row">
+  <div class="container  content-box">
+    
+    {!-- {if !segment_1}
+      {embed="home/.hero-bar"
+        page_title="{embed:page_title}"
+      }
+    {/if} --}
+
+    {if segment_1}
+    <header class="page__title  content--full-width  page--use-divider">
+      <h1>
+        {if {exp:segment_search keyword="/P\d+/" regex="yes" segments="1"}}
+          News &amp; Blog
+        {if:elseif embed:page_title}
+          {embed:page_title}
+        {if:else}
+          {exp:low_title:channel channel_name="{segment_1}"}
+        {/if}
+      </h1>
+    </header>
+    {/if}
+    
+    <div class="grid">
+
+     <div class="grid__item  one-whole">
+        <div class="content__column  content--lead">
+          <div class="content__item  content--has-article-type">
+            <article class="article__summary ">     
+              
+              <!-- <span class="article__type">{categories}{category_name}{/categories}</span> -->
+              
+              {if segment_3}
+              <h2 class="article__title">{title}</h2>
+              {if:else}
+              <a href="{path=SITE_INDEX}{channel_short_name}/{url_title}/{entry_id}" title="Click to read: {title}">
+                <h2 class="article__title">{title}</h2>
+              </a>
+              {/if}
+
+              {main_content_body}
+
+            </article>
+          </div><!-- /.content__item  -->
+        </div><!-- /.content__column  -->
+      </div><!--
+
+   --><div class="grid__item  {embed:main_span}">
+     
+        {embed="{embed:target}"
+          group_id="{embed:group_id}"
+          limit="{embed:limit}"
+          channel="{embed:channel}"
+          category="{embed:category}"
+          order_id="{embed:order_id}"
+        }
+     
+      </div><!-- 
+
+   -->{if embed:sidebar_span != ""}<div class="grid__item  {embed:sidebar_span}">
+        <div class="page__sidebar">
+          {embed="{embed:sidebar}"}
+        </div>
+      </div>{/if}
+
+    </div>
+  </div>
+</section>
+
+{embed="_common/.page_footer"}

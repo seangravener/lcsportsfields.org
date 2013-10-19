@@ -40,6 +40,21 @@ a:hover {
   text-decoration: none;
 }
 
+.no-wrap {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.content__highlight {
+  padding: $base-spacing-unit;
+  background: #efefef;
+  margin-bottom: $base-spacing-unit;
+}
+
+.get-directions input[type="text"] {
+  width: 50%;
+}
 
 /*
  * typography helpers
@@ -49,3 +64,4 @@ $namespace: 'text--'; // eg .text--highlight {}
 .#{$namespace}highlight {
   background: $highlight;
 }
+

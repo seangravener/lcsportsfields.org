@@ -1,0 +1,43 @@
+.banner__item {
+
+  // border-right: 5px solid #222;
+  border-bottom: 5px solid #222;
+  background: #222;
+
+  img {
+    display: block;
+    width: 100%;
+  }
+
+}
+.page__banners .content-box {
+background: #222;  
+}
+
+.page__banners { 
+  // max-height: 150px;
+
+  .grid.no-gutters {
+    margin-left: -5px;
+
+    .grid__item {
+      padding-left: 5px;
+
+      &:last-child .banner__item {
+        border-right: 0;
+      }
+    }
+  }
+}
+
+/* extend the grid so we can 
+   use generated row identifies */
+.banner_1 {
+  @extend .one-whole;
+}
+.banner_2 {
+  @extend .one-half;
+}
+.banner_3 {
+  @extend .one-third;
+}

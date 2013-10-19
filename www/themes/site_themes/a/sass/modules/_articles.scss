@@ -114,3 +114,21 @@ $announce: #7d83d3;
 	padding: 2px 6px;
 	background: #FFFFA0;
 }
+
+.one-whole .content__column {
+	border-right: 0;
+}
+
+.content__column.content--lead {
+	border-bottom: 5px solid #222;
+	background: #DEE0FF;
+
+}
+
+.content--lead {
+	.content--has-article-type .article__type {
+		background: #272E79;
+		border: 1px solid lighten(#272E79, 20%);
+		border-bottom: 0;
+	}
+}

@@ -1,0 +1,41 @@
+{exp:channel:entries channel="sidebar" limit="10" {global:param_disable_extras}}
+<div class="sidebar__item  content--banner-title">
+  <h3>{title}</h3>
+  {main_content_body}
+</div>
+{/exp:channel:entries}
+
+<div class="sidebar__item  content--banner-title">
+  <h3>Upcoming Events</h3>
+
+  <div id="gcal__event-list">
+    <ul class="list--nested">
+      <li class="event-list--loading">There are no upcoming events</li>
+    </ul>
+  </div>
+
+  <footer>
+    <a href="{path=calendar}" title="See all Upcoming Events">See all Upcoming Events</a>
+  </footer>
+</div>
+<script id="gcal__event-list-template" type="text">
+<li>
+  <h4 class="item__heading"><a target="_blank" href="{{event_link}}">{{event_title}}</a></h4>
+  <ul class="item__details items--centered">
+    <li>
+      <b>{{event_date}}</b>
+    </li>
+    <li>
+      {{event_start}}
+      to
+      {{event_end}}
+    </li>
+    <li>
+      {{event_location}}
+    </li>
+    <li>
+      {{event_description}}
+    </li>
+  </ul>
+</li>
+</script>
