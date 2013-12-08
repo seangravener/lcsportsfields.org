@@ -20,6 +20,15 @@
      
       {main_content_body}
 
+      {if main_attach_files >= 1}
+        <h3>Downloads</h3>
+        <ul class="attached-files">
+          {main_attach_files}
+            <li><a href="{attach_file}" title="Download {attach_title}" target="_blank">{attach_title}</a></li>
+          {/main_attach_files}
+        </ul>
+      {/if}
+
      <!--  <footer class="article__footer cf">
         <div class="float-left">
           <a href="" title="">See all announcements</a>

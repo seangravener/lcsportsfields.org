@@ -1,69 +1,27 @@
+{exp:channel:entries limit="1" channel="directions" {global:param_disable_extras}}
+<div class="gmaps">
+  <div class="flexible-container">
+    <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="{google_maps_embed_link}"></iframe>
+  </div>
+</div>
+
 <div class="content__column">
   <div class="content__item  content--has-article-type">
     <article class="article__summary ">     
 
-    <span class="article__type">Driving to the LC Sports Fields</span>
+    <span class="article__type">{title}</span>
 
       <div class="grid">
 
         <div class="grid__item two-thirds  palm-one-whole">
 
-          <h3>Get Directions</h3>
-          <p>Enter the starting address below to open a new window with driving directions from Google Maps.</p>
+          {directions_main_column}
 
-            <div class="content__highlight">
-              <form class="get-directions" action="http://maps.google.com/maps" method="get" target="_blank">
-                <label>Enter your starting point:</label>
-                <input type="text" name="saddr" width="50%" placeholder="eg. Street Address, City, or Zip" />
-                <input type="hidden" name="daddr" value="Lehigh County Sports Fields, Allentown, PA" />
-                <input type="submit" value="Get Directions" />
-              </form>
-            </div>
-
-            <div class="flexible-container">
-              <iframe frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?f=q&amp;source=s_q&amp;hl=en&amp;geocode=&amp;q=Lehigh+County+Sports+Fields,+Allentown,+PA&amp;aq=0&amp;oq=lehigh+county+sports+fi&amp;sll=40.336681,-75.230642&amp;sspn=1.436207,2.359314&amp;ie=UTF8&amp;hq=Lehigh+County+Sports+Fields,+Allentown,+PA&amp;ll=40.581035,-75.546774&amp;spn=0.044713,0.073729&amp;t=m&amp;z=14&amp;iwloc=A&amp;cid=5598351534588151011&amp;output=embed"></iframe>
-            </div>
-
-          <h3>Parking</h3>
-          <p>Below are some guidelines to remember when parking your vehicle at the fields. For large events, parking attendants are provided in the morning to help direct you to your best parking location; be prepared to provide the attendent with your field number.</p>
-          <ul>
-            <li>Park all vehicles facing into or away from the fields, perpendicular to the road surface.</li>
-            <li>Observe handicapped parking signs.</li>
-            <li>For safety reasons, certain areas may be roped off. Please do not park on the macadam along the ropes. </li>
-          </ul>
         </div><!--
 
      --><div class="grid__item  one-third  palm-one-whole">
           
-          <h3>From West</h3>
-          <ul>
-            <li>Take I 78 East</li>
-            <li>To Route 22 East</li>
-            <li>Exit at Route 309 South</li>
-            <li>Exit Tilghman Street East (toward Allentown)</li>
-            <li>Turn right at 1st traffic light onto Parkway Road</li>
-            <li>Follow Parkway Road through traffic light into Lehigh County Fields</li>
-          </ul>
-
-          <h3>From West</h3>
-          <ul>
-            <li>Take I 78 East</li>
-            <li>To Route 22 East</li>
-            <li>Exit at Route 309 South</li>
-            <li>Exit Tilghman Street East (toward Allentown)</li>
-            <li>Turn right at 1st traffic light onto Parkway Road</li>
-            <li>Follow Parkway Road through traffic light into Lehigh County Fields</li>
-          </ul>
-
-          <h3>From West</h3>
-          <ul>
-            <li>Take I 78 East</li>
-            <li>To Route 22 East</li>
-            <li>Exit at Route 309 South</li>
-            <li>Exit Tilghman Street East (toward Allentown)</li>
-            <li>Turn right at 1st traffic light onto Parkway Road</li>
-            <li>Follow Parkway Road through traffic light into Lehigh County Fields</li>
-          </ul>
+         {directions_right_column}
 
         </div>
   
@@ -72,3 +30,4 @@
     </article>
   </div>
 </div>
+{/exp:channel:entries}

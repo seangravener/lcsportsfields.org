@@ -50,22 +50,12 @@
         <a href="">Coaches &amp; Teams</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
-            <li><a href="">
-              Fields Map
-              <span>short description desribing this item</span>
+            {exp:channel:entries channel="page" limit="12" category="5" orderby="nav__orderby" sort="asc" dynamic="off" {global:param_disable_extras} {global:param_cache_param}}
+            <li><a href="/{path=p}/{url_title}/{entry_id}">
+              {title}
+              {if nav__description}<span>{nav__description}</span>{/if}
             </a></li>
-            <li><a href="">
-              Practice Guidelines
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Reserve a Field
-              <span>short description desribing this item</span>
-            </a></li>
-            <li><a href="">
-              Fees
-              <span>short description desribing this item</span>
-            </a></li>
+            {/exp:channel:entries}
           </ul>
         </div>
       </li>
@@ -77,7 +67,7 @@
             <li><a href="{path=directions}">
               Get Directions
             </a></li>
-            <li><a href="">
+            <li><a href="{path=directions}/#parking">
               Parking Guidelines
             </a></li>
           </ul>
