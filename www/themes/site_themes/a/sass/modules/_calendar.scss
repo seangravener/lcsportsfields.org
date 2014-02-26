@@ -4,7 +4,14 @@
 	}
 }
 
-.cal--test,
-.cal--default {
-	background: #efefef;
+.cal--field-schedule {
+	background: #4986E7;
+  border-color: #2C70D1;
+  color: #000 !important;
+}
+
+.cal--event-schedule {
+  background: #FA573C;
+  border-color: #D02424;
+  color: #000 !important;
 }

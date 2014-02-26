@@ -21,7 +21,7 @@
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             {exp:channel:categories channel="news" category_group="1" show_empty="yes" style="linear"}
-            <li><a href="/{path=news}">
+            <li><a href="{path=news}">
               {category_name}
               {if category_description}<span>short description desribing this item</span>{category_description}{/if}
             </a></li>
@@ -31,7 +31,7 @@
       </li>
 
       <li{if segment_1 == "calendar"} class="active"{/if}>
-        <a href="/calendar/">Calendar</a>
+        <a href="/calendar/">Schedules</a>
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             <li><a href="">
@@ -51,7 +51,7 @@
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             {exp:channel:entries channel="page" limit="12" category="5" orderby="nav__orderby" sort="asc" dynamic="off" {global:param_disable_extras} {global:param_cache_param}}
-            <li><a href="/{path=p}/{url_title}/{entry_id}">
+            <li><a href="{path=p}/{url_title}/{entry_id}">
               {title}
               {if nav__description}<span>{nav__description}</span>{/if}
             </a></li>
@@ -70,6 +70,9 @@
             <li><a href="{path=directions}/#parking">
               Parking Guidelines
             </a></li>
+            <li><a href="{path=p}/fields-map/36">
+              Fields Map
+            </a></li>
           </ul>
         </div>
       </li>
@@ -79,7 +82,7 @@
         <div class="nav--dropdown--menu cf">
           <ul class="nav--block  nav--stacked">
             {exp:channel:entries channel="page" limit="12" category="4" orderby="nav__orderby" sort="asc" dynamic="off" {global:param_disable_extras} {global:param_cache_param}}
-            <li><a href="/{path=p}/{url_title}/{entry_id}">
+            <li><a href="{path=p}/{url_title}/{entry_id}">
               {title}
               {if nav__description}<span>{nav__description}</span>{/if}
             </a></li>

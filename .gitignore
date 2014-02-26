@@ -44,3 +44,5 @@ www/themes/third_party/
 
 # Configs
 ee_config_bootstrap.php
+
+*.sql

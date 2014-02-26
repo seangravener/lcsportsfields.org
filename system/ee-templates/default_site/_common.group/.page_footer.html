@@ -1,6 +1,11 @@
-  Copyright &copy; {current_time format="%Y"}
+  <footer class="page__footer">
+    <div class="container  content-box cf">
+      <p class="float-left">Copyright &copy; {current_time format="%Y"} Lehigh County Sports Fields</p>
 
-  "I heart websites!" >> show:  This website is powered by Expression Engine. The <a href="https://github.com/seangravener/lcsportsfields.org/tree/master/www/themes/site_themes/a">theme</a> and <a href="https://github.com/seangravener/lcsportsfields.org/tree/master/system/ee-templates/default_site">templates for this website</a> are avialable for free.
+      <p class="float-right text-right">This website is powered by Expression Engine. 
+      <br>The <a href="https://github.com/seangravener/lcsportsfields.org/tree/master/www/themes/site_themes/a" target="_blank">theme</a> and <a href="https://github.com/seangravener/lcsportsfields.org/tree/master/system/ee-templates/default_site" target="_blank">templates</a> are avialable for free.</p>
+    </div>
+  </footer>
 
   <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
   <script>window.jQuery || document.write('<script src="{global:theme_url}/js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
@@ -12,79 +17,6 @@
   <script src="{global:theme_url}/js/plugins.js"></script>
   <script src="{global:theme_url}/js/main.js"></script>
   <!-- end scripts-->
-
-  <script>
-    // $(document).ready(function() {
-    //  $('#fitvids').fitVids();
-    // });
-
-  $(document).ready(function() {
-   
-    var listGcalEvents = function ( url ) {
-
-      var $template  = $('#gcal__event-list-template'),
-          $eventList = $('#gcal__event-list > ul');
-
-      $.ajax({
-        type: 'GET',
-        url: url + '&alt=json-in-script',
-        dataType: 'jsonp',
-        success: function( data ) {
-
-          var entries = data.feed.entry;
-
-          if ( entries ) {
-
-            // clear
-            $eventList.html('');
-
-            $.each(entries, function( i, item ) {
-             
-              console.log(item);
-
-              var html   = $template.html(),
-                  date   = $.formatDateTime('DD, MM d, yy', new Date( item['gd$when'][0].startTime )),
-                  start  = $.formatDateTime('g:ii a', new Date( item['gd$when'][0].startTime )),
-                  end    = $.formatDateTime('g:ii a', new Date( item['gd$when'][0].endTime )),
-                  tokens = {
-                    "event_title" : item.title.$t,
-                    "event_date"  : date,
-                    "event_start" : start,
-                    "event_end"   : end,
-                    "event_link"  : item['link'][0].href,
-                    "event_description": item['content']['$t'],
-                    "event_location" : item['gd$where'][0].valueString
-                  }
-
-              for ( token in tokens ) {
-
-                var key   = '{{' + token + '}}',
-                    value = tokens[ token ];
-
-                html = html.replace( key , value );
-
-              }
-
-              $eventList.append( html );
-
-            });
-
-          }
-
-          else {
-            // $eventList
-          }
-
-        }
-
-      });
-
-    };
-
-    listGcalEvents( 'https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true' );
-
-  });
-  </script>
 
   <!-- GA, hombre' -->
   <script>

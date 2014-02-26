@@ -180,6 +180,27 @@ body {
   }
 }
 
+.page__footer {
+  border-top: 5px solid #222;
+  border-bottom: 5px solid #222;
+  //background: $fieldGreen;
+  color: #ccc;
+  @include font-size(14px);
+
+  a, a:link, a:visited {
+    color: #fff;
+  }
+
+  p {
+    margin: 0;
+  }
+
+  .container {
+    padding: $half-spacing-unit 0;
+    background: #222;
+  }
+}
+
 @include media-query(portable) {
   .page__title {
 
@@ -277,6 +298,6 @@ $banner-bg: $fieldGreen;
 }
 
 .gmaps {
-  max-height: 250px; 
+  max-height: 500px;
   overflow: hidden;
 }
