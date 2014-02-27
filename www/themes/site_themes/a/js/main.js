@@ -61,11 +61,11 @@ jQuery(document).ready( function($) {
     $calendar.fullCalendar({
       eventSources: [
           {
-            url: "https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/basic",
+            url: "https://www.google.com/calendar/feeds/pojjg2ghjl8oge4v5p1m6e8npo%40group.calendar.google.com/public/basic",
             className: 'cal--field-schedule'
           },
           {
-            url: "https://www.google.com/calendar/feeds/mrk0g7pivn1kv3oqkqhr82r4ec%40group.calendar.google.com/public/basic",
+            url: "https://www.google.com/calendar/feeds/5tdpvp6semjdjvgctgrtd8otcg%40group.calendar.google.com/public/basic",
             className: 'cal--event-schedule'
           }
       ],
