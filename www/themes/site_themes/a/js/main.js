@@ -140,6 +140,6 @@ jQuery(document).ready( function($) {
 
   };
 
-  listGcalEvents( 'https://www.google.com/calendar/feeds/lcsfasoccer%40gmail.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true' );
+  listGcalEvents( 'https://www.google.com/calendar/feeds/5tdpvp6semjdjvgctgrtd8otcg%40group.calendar.google.com/public/full?orderby=starttime&sortorder=ascending&futureevents=true' );
 
 });
