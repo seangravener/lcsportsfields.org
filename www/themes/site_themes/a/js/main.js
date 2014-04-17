@@ -101,15 +101,6 @@ jQuery(document).ready( function($) {
 
           $.each(entries, function( i, item ) {
 
-           // var UTCDate = new Date( item['gd$when'][0].startTime ).toUTCString();
-           // console.log('pre', UTCDate);
-           
-           // UTC2Date = new Date( UTCDate.toUTCString() );
-           // console.log('pre2', UTC2Date);
-           // console.log('tostring', UTCDate.toUTCString());
-
-           // UTCDate =  UTC2Date.getFullYear() + '/' + UTC2Date.getMonth() + '/' + UTC2Date.getDay();
-           // 
            var gcalDate = new Date( item['gd$when'][0].startTime );
 
             var html   = $template.html(),
@@ -125,11 +116,6 @@ jQuery(document).ready( function($) {
                   "event_description": item['content']['$t'],
                   "event_location" : item['gd$where'][0].valueString
                 };
-
-            // console.log('utc', UTCDate);
-            console.log('date', date);
-            console.log('gcal', item['gd$when'][0].startTime);
-
 
             for ( token in tokens ) {
 
