@@ -111,7 +111,7 @@ jQuery(document).ready( function($) {
                   "event_title" : item.title.$t,
                   "event_date"  : date,
                   "event_start" : (start != '12:00 AM') ? start + ' to ': '',
-                  "event_end"   : (end != '12:00 AM') ? end : 'All Day',
+                  "event_end"   : (end != '12:00 AM') ? end : '',
                   "event_link"  : item['link'][0].href,
                   "event_description": item['content']['$t'],
                   "event_location" : item['gd$where'][0].valueString
