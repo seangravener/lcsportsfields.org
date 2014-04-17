@@ -24,3 +24,8 @@ TO >>
   display: none;
 }
 ```
+
+
+## 04-16-2014
+modified /www/themes/site_themes/a/js/plugins/jquery.formateDateTime.js to use all getUTC* methods.
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date

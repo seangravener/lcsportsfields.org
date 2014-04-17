@@ -101,19 +101,35 @@ jQuery(document).ready( function($) {
 
           $.each(entries, function( i, item ) {
 
+           // var UTCDate = new Date( item['gd$when'][0].startTime ).toUTCString();
+           // console.log('pre', UTCDate);
+           
+           // UTC2Date = new Date( UTCDate.toUTCString() );
+           // console.log('pre2', UTC2Date);
+           // console.log('tostring', UTCDate.toUTCString());
+
+           // UTCDate =  UTC2Date.getFullYear() + '/' + UTC2Date.getMonth() + '/' + UTC2Date.getDay();
+           // 
+           var gcalDate = new Date( item['gd$when'][0].startTime );
+
             var html   = $template.html(),
-                date   = $.formatDateTime('DD, MM d, yy', new Date( item['gd$when'][0].startTime )),
+                date   = $.formatDateTime('DD, MM d, yy', new Date( item['gd$when'][0].startTime ) ),
                 start  = $.formatDateTime('g:ii a', new Date( item['gd$when'][0].startTime )),
                 end    = $.formatDateTime('g:ii a', new Date( item['gd$when'][0].endTime )),
                 tokens = {
                   "event_title" : item.title.$t,
                   "event_date"  : date,
-                  "event_start" : start,
-                  "event_end"   : end,
+                  "event_start" : (start != '12:00 AM') ? start + ' to ': '',
+                  "event_end"   : (end != '12:00 AM') ? end : 'All Day',
                   "event_link"  : item['link'][0].href,
                   "event_description": item['content']['$t'],
                   "event_location" : item['gd$where'][0].valueString
-                }
+                };
+
+            // console.log('utc', UTCDate);
+            console.log('date', date);
+            console.log('gcal', item['gd$when'][0].startTime);
+
 
             for ( token in tokens ) {
 

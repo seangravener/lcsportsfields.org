@@ -74,55 +74,55 @@
             } else {
                 switch (format.charAt(iFormat)) {
                 case 'a':
-                    output += date.getHours() < 12
+                    output += date.getUTCHours() < 12
                         ? settings.ampmNames[0]
                         : settings.ampmNames[1];
                     break;
                 case 'd':
-                    output += formatNumber('d', date.getDate(), 2);
+                    output += formatNumber('d', date.getUTCDate(), 2);
                     break;
                 case 'D':
                     output += formatName('D',
-                                         date.getDay(),
+                                         date.getUTCDay(),
                                          settings.dayNamesShort,
                                          settings.dayNames);
                     break;
                 case 'o':
-                    var end = new Date(date.getFullYear(),
-                                       date.getMonth(),
-                                       date.getDate()).getTime();
-                    var start = new Date(date.getFullYear(), 0, 0).getTime();
+                    var end = new Date(date.getUTCFullYear(),
+                                       date.getUTCMonth(),
+                                       date.getUTCDate()).getTime();
+                    var start = new Date(date.getUTCFullYear(), 0, 0).getTime();
                     output += formatNumber(
                         'o', Math.round((end - start) / 86400000), 3);
                     break;
                 case 'g':
-                    var hour = date.getHours() % 12;
+                    var hour = date.getUTCHours() % 12;
                     output += formatNumber('g', (hour === 0 ? 12 : hour), 2);
                     break;
                 case 'h':
-                    output += formatNumber('h', date.getHours(), 2);
+                    output += formatNumber('h', date.getUTCHours(), 2);
                     break;
                 case 'u':
-                    output += formatNumber('u', date.getMilliseconds(), 3);
+                    output += formatNumber('u', date.getUTCMilliseconds(), 3);
                     break;
                 case 'i':
-                    output += formatNumber('i', date.getMinutes(), 2);
+                    output += formatNumber('i', date.getUTCMinutes(), 2);
                     break;
                 case 'm':
-                    output += formatNumber('m', date.getMonth() + 1, 2);
+                    output += formatNumber('m', date.getUTCMonth() + 1, 2);
                     break;
                 case 'M':
                     output += formatName('M',
-                                         date.getMonth(),
+                                         date.getUTCMonth(),
                                          settings.monthNamesShort,
                                          settings.monthNames);
                     break;
                 case 's':
-                    output += formatNumber('s', date.getSeconds(), 2);
+                    output += formatNumber('s', date.getUTCSeconds(), 2);
                     break;
                 case 'y':
                     output += (lookAhead('y')
-                               ? date.getFullYear()
+                               ? date.getUTCFullYear()
                                : (date.getYear() % 100 < 10 ? '0' : '')
                                + date.getYear() % 100);
                     break;
